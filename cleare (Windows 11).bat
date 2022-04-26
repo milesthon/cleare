@@ -3,10 +3,13 @@
 :: ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 @ECHO OFF
+setlocal EnableDelayedExpansion
 CHCP 65001>NUL
 TITLE Очистка кэша by mmichaelKo
 MODE 80,26
 COLOR f9
+
+cls
 
 ECHO.
 ECHO.
@@ -206,8 +209,8 @@ ECHO.
 ECHO                 Сброс DNS кэша..
 ECHO                 [32m[5m█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 CHCP 866>NUL
-:: ipconfig /flushdns 2>nul >nul
-:: ipconfig /registerdns 2>nul >nul
+ipconfig /flushdns 2>nul >nul
+ipconfig /registerdns 2>nul >nul
 
 cls
 

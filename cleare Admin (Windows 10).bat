@@ -220,8 +220,8 @@ ECHO.
 ECHO                 Сброс DNS кэша..
 ECHO                 [32m█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 CHCP 866>NUL
-:: ipconfig /flushdns 2>nul >nul
-:: ipconfig /registerdns 2>nul >nul
+ipconfig /flushdns 2>nul >nul
+ipconfig /registerdns 2>nul >nul
 
 cls
 
