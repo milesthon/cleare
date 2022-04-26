@@ -644,32 +644,6 @@ goto noshadows
 :noshadows
 cls
 
-MODE 80,30
-CHCP 65001>NUL
-COLOR f9
-ECHO.
-ECHO.
-ECHO.
-ECHO.
-CHCP 65001>NUL
-set /p Input=.        Выполнить дефрагментацию диска F: ? (y (Да)/n (Нет):
-CHCP 866>NUL
-If /I "%Input%"=="y" goto defrag
-goto nodefrag
-
-:defrag
-CHCP 65001>NUL
-ECHO.
-ECHO.
-ECHO.
-ECHO.
-ECHO                 Дефрагментация диска F:
-CHCP 866>NUL
-defrag F: /U
-
-:nodefrag
-cls
-
 CHCP 65001>NUL
 powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('Кэш и ненужные файлы успешно удалены. Место освобождено', 'Успешная очистка', 'OK', [System.Windows.Forms.MessageBoxIcon]::Information);}"
 exit
