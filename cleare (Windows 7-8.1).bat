@@ -50,6 +50,9 @@ ECHO                 ███████░░░░░░░░░░░░�
 CHCP 866>NUL
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Active Setup Temp Folders" /v StateFlags0099 /d 2 /t REG_DWORD /f 2>nul >nul
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\BranchCache" /v StateFlags0099 /d 2 /t REG_DWORD /f 2>nul >nul
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Delivery Optimization Files" /v StateFlags0099 /d 2 /t REG_DWORD /f 2>nul >nul
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Diagnostic Data Viewer database files" /v StateFlags0099 /d 2 /t REG_DWORD /f 2>nul >nul
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\RetailDemo Offline Content" /v StateFlags0099 /d 2 /t REG_DWORD /f 2>nul >nul
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Downloaded Program Files" /v StateFlags0099 /d 2 /t REG_DWORD /f 2>nul >nul
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\GameNewsFiles" /v StateFlags0099 /d 2 /t REG_DWORD /f 2>nul >nul
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\GameStatisticsFiles" /v StateFlags0099 /d 2 /t REG_DWORD /f 2>nul >nul
@@ -634,34 +637,5 @@ rundll32.exe
 cls
 
 CHCP 65001>NUL
-COLOR f9
-ECHO.
-ECHO.
-ECHO.
-ECHO.
-CHCP 65001>NUL
-set /p Input=.           Удалить резервные копии Windows? (y (Да)/n (Нет):
-CHCP 866>NUL
-If /I "%Input%"=="y" goto shadows
-goto noshadows
-
-:shadows
-cls
-
-CHCP 65001>NUL
-COLOR f9
-ECHO.
-ECHO.
-ECHO.
-ECHO.
-ECHO                 Удаление резервных копий Windows..
-CHCP 866>NUL
-vssadmin delete shadows /all /quiet 2>nul >nul
-goto noshadows
-
-:noshadows
-cls
-
-CHCP 65001>NUL
-powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('Кэш и ненужные файлы успешно удалены. Место освобождено', 'Успешная очистка', 'OK', [System.Windows.Forms.MessageBoxIcon]::Information);}"
+msg * "Кэш и ненужные файлы успешно удалены!                                      Cache and junk files removed successfully!"
 exit
