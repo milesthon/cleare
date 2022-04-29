@@ -220,7 +220,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting Microsoft Store Cache..
+ECHO                Deleting Microsoft Store cache..
 ECHO                Удаление кэша Microsoft Store..
 ECHO                [32m[5m████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -370,7 +370,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Removing Nvidia Cache..
+ECHO                Removing Nvidia cache..
 ECHO                Удаление кэша Nvidia..
 ECHO                [32m[5m██████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -390,7 +390,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting the Microsoft Office Cache..
+ECHO                Deleting the Microsoft Office cache..
 ECHO                Удаление кэша Microsoft Office..
 ECHO                [32m[5m███████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -459,7 +459,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting Windows History..
+ECHO                Deleting Windows history..
 ECHO                Удаление истории Windows..
 ECHO                [32m[5m██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -475,7 +475,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Removing Java Cache..
+ECHO                Removing Java cache..
 ECHO                Удаление кэша Java..
 ECHO                [32m[5m███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -491,7 +491,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting Discord Cache..
+ECHO                Deleting Discord cache..
 ECHO                Удаление кэша Discord..
 ECHO                [32m[5m████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -528,7 +528,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting Spotify Cache..
+ECHO                Deleting Spotify cache..
 ECHO                Удаление кэша Spotify..
 ECHO                [32m[5m█████████████████████████████░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -561,7 +561,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting Steam Cache..
+ECHO                Deleting Steam cache..
 ECHO                Удаление кэша Steam..
 ECHO                [32m[5m█████████████████████████████████░░░░░░░░░░░░░░░░░
 ECHO.
@@ -578,7 +578,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting the Internet Explorer Cache..
+ECHO                Deleting the Internet Explorer cache..
 ECHO                Удаление кэша Internet Explorer..
 ECHO                [32m[5m██████████████████████████████████░░░░░░░░░░░░░░░░
 ECHO.
@@ -604,6 +604,8 @@ CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Program Files (x86)\Microsoft\EdgeUpdate\Download\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Edge\User Data\Default\Code Cache\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Edge\User Data\Default\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Edge\User Data\Profile*\Code Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Edge\User Data\Profile*\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
 
 cls
 
@@ -612,7 +614,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting Google Chrome Cache..
+ECHO                Deleting Google Chrome cache..
 ECHO                Удаление кэша Google Chrome..
 ECHO                [32m[5m██████████████████████████████████████░░░░░░░░░░░░
 ECHO.
@@ -621,8 +623,11 @@ ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Program Files\Google\Update\Download\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Program Files (x86)\Google\Update\Download\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\Update\Download\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\Chrome\User Data\Default\Code Cache\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\Chrome\User Data\Default\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\Chrome\User Data\Profile*\Code Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\Chrome\User Data\Profile*\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
 
 cls
 
@@ -631,7 +636,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting cache Yandex Browser..
+ECHO                Deleting Yandex Browser cache..
 ECHO                Удаление кэша Yandex Browser..
 ECHO                [32m[5m████████████████████████████████████████░░░░░░░░░░
 ECHO.
@@ -640,6 +645,8 @@ ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Yandex\YandexBrowser\User Data\Default\Code Cache\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Yandex\YandexBrowser\User Data\Default\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Yandex\YandexBrowser\User Data\Profile*\Code Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Yandex\YandexBrowser\User Data\Profile*\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
 
 cls
 
@@ -648,7 +655,119 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting the Microsoft Teams Cache..
+ECHO                Deleting Firefox cache..
+ECHO                Удаление кэша Firefox..
+ECHO                [32m[5m████████████████████████████████████████░░░░░░░░░░
+ECHO.
+ECHO.
+ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Mozilla\Firefox\Profiles\*.default-release\cache2\entries\*' -Recurse -Force"
+
+cls
+
+CHCP 65001>NUL
+COLOR f9
+ECHO.
+ECHO.
+ECHO.
+ECHO                Deleting Opera cache..
+ECHO                Удаление кэша Opera..
+ECHO                [32m[5m████████████████████████████████████████░░░░░░░░░░
+ECHO.
+ECHO.
+ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Opera Software\Opera Stable\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Opera Software\Opera GX Stable\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Opera Software\Opera GX Stable\_side_profiles\*\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR f9
+ECHO.
+ECHO.
+ECHO.
+ECHO                Deleting Cent Browser cache..
+ECHO                Удаление кэша Cent Browser..
+ECHO                [32m[5m████████████████████████████████████████░░░░░░░░░░
+ECHO.
+ECHO.
+ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\CentBrowser\User Data\Default\Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\CentBrowser\User Data\Default\Code Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\CentBrowser\User Data\Profile*\Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\CentBrowser\User Data\Profile*\Code Cache\*' -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR f9
+ECHO.
+ECHO.
+ECHO.
+ECHO                Deleting Atom cache..
+ECHO                Удаление кэша Atom..
+ECHO                [32m[5m████████████████████████████████████████░░░░░░░░░░
+ECHO.
+ECHO.
+ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Mail.Ru\Atom\User Data\Default\Code Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Mail.Ru\Atom\User Data\Default\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Mail.Ru\Atom\User Data\Profile*\Code Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Mail.Ru\Atom\User Data\Profile*\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR f9
+ECHO.
+ECHO.
+ECHO.
+ECHO                Deleting Vivaldi cache..
+ECHO                Удаление кэша Vivaldi..
+ECHO                [32m[5m████████████████████████████████████████░░░░░░░░░░
+ECHO.
+ECHO.
+ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Vivaldi\User Data\Default\Code Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Vivaldi\User Data\Default\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Vivaldi\User Data\Profile*\Code Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Vivaldi\User Data\Profile*\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR f9
+ECHO.
+ECHO.
+ECHO.
+ECHO                Deleting BraveBrowser cache..
+ECHO                Удаление кэша BraveBrowser..
+ECHO                [32m[5m████████████████████████████████████████░░░░░░░░░░
+ECHO.
+ECHO.
+ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Program Files\BraveSoftware\Update\Download\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Program Files (x86)\BraveSoftware\Update\Download\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Code Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\BraveSoftware\Brave-Browser\User Data\Profile*\Code Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\BraveSoftware\Brave-Browser\User Data\Profile*\Cache\Cache_Data\*' -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR f9
+ECHO.
+ECHO.
+ECHO.
+ECHO                Deleting the Microsoft Teams сache..
 ECHO                Удаление кэша Microsoft Teams..
 ECHO                [32m[5m█████████████████████████████████████████░░░░░░░░░
 ECHO.
