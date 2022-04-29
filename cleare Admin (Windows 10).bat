@@ -147,30 +147,17 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting user temporary files..
-ECHO                Удаление временных файлов пользователя..
-ECHO                [32m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
-CHCP 866>NUL
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Temp\*' -Recurse -Force" 2>nul >nul
-
-cls
-
-CHCP 65001>NUL
-COLOR f9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting temporary files drive C..
-ECHO                Удаление временных файлов диск C..
-ECHO                [32m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO                Deleting temporary files..
+ECHO                Удаление временных файлов..
+ECHO                [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
 ECHO.
 ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Windows\Temp\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Temp\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Windows\ServiceProfiles\LocalService\AppData\Local\Temp\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Windows\ServiceProfiles\NetworkService\AppData\Local\Temp\*' -Recurse -Force" 2>nul >nul
 
 cls
 
@@ -520,6 +507,23 @@ PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Adobe\Common\Media 
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\LocalLow\Adobe\Common\Media Cache\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Adobe\Common\Media Cache Files\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\LocalLow\Adobe\Common\Media Cache Files\*' -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR f9
+ECHO.
+ECHO.
+ECHO.
+ECHO                Deleting the RedGiant cache..
+ECHO                Удаление кэша RedGiant..
+ECHO                [32m[5m████████████████████████████░░░░░░░░░░░░░░░░░░░░░░
+ECHO.
+ECHO.
+ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\ProgramData\Maxon\Service\Downloads\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\ProgramData\Red Giant\Red Giant Service\Downloads\*' -Recurse -Force" 2>nul >nul
 
 cls
 
