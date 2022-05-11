@@ -736,7 +736,7 @@ ECHO.
 ECHO.
 ECHO.
 CHCP 866>NUL
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\LocalLow\Sun\Java\Deployment\cache\*' -Recurse -Force" 2>nul >null
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\LocalLow\Sun\Java\Deployment\cache\*' -Recurse -Force" 2>nul >nul
 
 cls
 
@@ -823,8 +823,8 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting Origin cache..
-ECHO                Удаление кэша Origin..
+ECHO                Deleting Origin / EA Launcher cache..
+ECHO                Удаление кэша Origin / EA Launcher..
 ECHO                [32m█████████████████████████████████░░░░░░░░░░░░░░░░░
 ECHO.
 ECHO.
