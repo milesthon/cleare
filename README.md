@@ -24,7 +24,8 @@ This batch script will remove the system cache and unnecessary files. It will al
 - Minecraft
 - Steam
 - Epic Launcher
-- Origin / EA Launcher
+- Origin
+- - EA Launcher
 - Battle.net
 - Rockstar Launcher 
 - - Social Club
