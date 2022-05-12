@@ -1,6 +1,6 @@
 # cleare
+#### [YouTube](https://YouTube.com/mmichaelKo) | [VK](https://VK.com/id180544766) | [Twitch](https://Twitch.tv/mmichaelKo) | [Instagram](https://Instagram.com/mmichaelKo) | [TikTok](https://TikTok.com/@mmichaelko)
 ## Clear cache and junk files | Очистка кэша и ненужных файлов
-
 This batch script will remove the system cache and unnecessary files. It will also clear the cache of programs such as:
 Данный batch скрипт удалит системный кэш и ненужные файлы. А так же очистит кэш программ таких как:
 - Microsoft Store
@@ -13,7 +13,8 @@ This batch script will remove the system cache and unnecessary files. It will al
 - Discord
 - OBS
 - Adobe
-- RedGiant / MaxonApp
+- MaxonApp
+- - RedGiant
 - Spotify
 - Yandex.Music
 - Clipchamp
@@ -24,11 +25,15 @@ This batch script will remove the system cache and unnecessary files. It will al
 - Epic Launcher
 - Origin / EA Launcher
 - Battle.net
-- Rockstar Launcher - Social Club
+- Rockstar Launcher 
+- - Social Club
 - GOG
 - Windows 11 Widgets
 - Microsoft Edge
-- Google Chrome / Google Chrome Beta / Google Chrome Canary / Chromium
+- Google Chrome
+- - Google Chrome Beta
+- - Google Chrome Canary
+- - Chromium
 - Yandex Browser
 - Opera
 - Firefox
