@@ -634,10 +634,14 @@ ECHO.
 ECHO.
 ECHO.
 CHCP 866>NUL
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\Cache\*'      -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\Code Cache\*' -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\Crashpad\*'   -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\GPUCache\*'   -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\Cache\*'                                -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\Code Cache\*'                           -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\Crashpad\*'                             -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\GPUCache\*'                             -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\plugin_config\obs-browser\Cache\*'      -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\plugin_config\obs-browser\Code Cache\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\plugin_config\obs-browser\Crashpad\*'   -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\plugin_config\obs-browser\GPUCache\*'   -Recurse -Force" 2>nul >nul
 
 cls
 
