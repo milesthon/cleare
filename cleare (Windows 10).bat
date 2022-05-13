@@ -6,9 +6,7 @@
 setlocal EnableDelayedExpansion
 CHCP 65001>NUL
 COLOR f9
-TITLE cleare by mmichaelKo
-
-cls
+TITLE cleare (Win 10) by mmichaelKo
 
 MODE 80,26
 ECHO.
@@ -515,13 +513,18 @@ ECHO.
 ECHO.
 ECHO.
 CHCP 866>NUL
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Teams\Cache\*'                         -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Teams\tmp\*'                           -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Cache\*'                       -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Code Cache\*'                  -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\GPUCache\*'                    -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Service Worker\CacheStorage\*' -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Service Worker\ScriptCache\*'  -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Teams\Cache\*'                                       -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Teams\tmp\*'                                         -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Cache\*'                                     -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Code Cache\*'                                -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\GPUCache\*'                                  -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Partitions\*\Cache\*'                        -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Partitions\*\Code Cache\*'                   -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Partitions\*\GPUCache\*'                     -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Partitions\*\Service Worker\CacheStorage\*'  -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Partitions\*\Service Worker\ScriptCache\*'   -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Service Worker\CacheStorage\*'               -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Service Worker\ScriptCache\*'                -Recurse -Force" 2>nul >nul
 
 cls
 
@@ -603,6 +606,42 @@ PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\obs-studio\plugin_c
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\obs-studio\plugin_config\obs-browser\obs_profile_cookies\*\Code Cache\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\obs-studio\plugin_config\obs-browser\obs_profile_cookies\*\GPUCache\*'   -Recurse -Force" 2>nul >nul
 
+cls
+
+CHCP 65001>NUL
+COLOR f9
+ECHO.
+ECHO.
+ECHO.
+ECHO                Deleting Streamlabs cache..
+ECHO                Удаление кэша Streamlabs..
+ECHO                [32m[5m███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.
+ECHO.
+ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\Cache\*'                            -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\Code Cache\*'                       -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\Crashpad\*'                         -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\GPUCache\*'                         -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR f9
+ECHO.
+ECHO.
+ECHO.
+ECHO                Deleting Twitch Studio cache..
+ECHO                Удаление кэша Twitch Studio..
+ECHO                [32m[5m███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.
+ECHO.
+ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Twitch Studio\Electron13\Cache\*'                            -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Twitch Studio\Electron13\Code Cache\*'                       -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Twitch Studio\Electron13\GPUCache\*'                         -Recurse -Force" 2>nul >nul
 
 cls
 
@@ -709,6 +748,22 @@ PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Apple Computer\iTunes
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Apple Computer\iTunes\SubscriptionPlayCache\*'     -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Apple Computer\iTunes\iPhone Software Updates\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Apple Computer\Logs\*'                           -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR f9
+ECHO.
+ECHO.
+ECHO.
+ECHO                Removing Python (pip) cache..
+ECHO                Удаление кэша Python (pip)..
+ECHO                [32m[5m███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.
+ECHO.
+ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\pip\cache\*' -Recurse -Force" 2>nul >nul
 
 cls
 
@@ -1020,6 +1075,9 @@ ECHO.
 ECHO.
 ECHO.
 CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Program Files\Yandex\YandexBrowser\Temp\*'                                            -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Program Files (x86)\Yandex\YandexBrowser\Temp\*'                                      -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Yandex\YandexBrowser\Temp\*'                                    -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Yandex\YandexBrowser\User Data\Crashpad\*'                      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Yandex\YandexBrowser\User Data\*\Cache\Cache_Data\*'            -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Yandex\YandexBrowser\User Data\*\Code Cache\*'                  -Recurse -Force" 2>nul >nul
@@ -1090,7 +1148,8 @@ ECHO.
 ECHO.
 ECHO.
 CHCP 866>NUL
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Mozilla\Firefox\Profiles\*\cache2\entries\*' -Recurse -Force"
+PowerShell -command "Remove-Item 'C:\ProgramData\Mozilla*\updates\*\updates\*'                          -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Mozilla\Firefox\Profiles\*\cache2\entries\*' -Recurse -Force" 2>nul >nul
 
 cls
 
@@ -1222,6 +1281,8 @@ PowerShell -command "Remove-Item 'C:\Windows\ServiceProfiles\LocalService\AppDat
 PowerShell -command "Remove-Item 'C:\Windows\System32\FNTCACHE.DAT'                                      -Recurse -Force" 2>nul >nul
 NET Start "FontCache"                                                                                                     2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\IconCache.db'                                 -Recurse -Force" 2>nul >nul
+:: Deleting SageThumbs cahce | Удаление кэша SageThumbs
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\SageThumbs.db3'                               -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Windows\Explorer\*.db'              -Recurse -Force" 2>nul >nul
 REG DELETE "HKCU\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify"                 /F 2>nul >nul
 Start Explorer.exe                                                                                                        2>nul >nul
