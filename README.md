@@ -13,6 +13,8 @@ This batch script will remove the system cache and unnecessary files. It will al
 - Telegram Desktop
 - Discord
 - OBS
+- Streamlabs
+- Twitch Studio
 - Adobe
 - MaxonApp
 - - RedGiant
@@ -20,6 +22,7 @@ This batch script will remove the system cache and unnecessary files. It will al
 - Yandex.Music
 - Clipchamp
 - Apple (iTunes)
+- Python (pip)
 - Java
 - Minecraft
 - Steam
@@ -43,5 +46,6 @@ This batch script will remove the system cache and unnecessary files. It will al
 - Atom
 - Vivaldi
 - BraveBrowser
+- SageThumbs
 ***
 by mmichaelKo
