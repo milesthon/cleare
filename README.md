@@ -45,7 +45,7 @@ This batch script will remove the system cache and unnecessary files. It will al
 - Cent Browser
 - Atom
 - Vivaldi
-- BraveBrowser
+- Brave Browser
 - SageThumbs
 ***
 by mmichaelKo
