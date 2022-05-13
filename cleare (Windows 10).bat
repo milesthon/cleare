@@ -299,7 +299,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting the RDP cache..
+ECHO                Deleting RDP cache..
 ECHO                Удаление кэша RDP..
 ECHO                [32m█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -395,7 +395,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting the Microsoft Office cache..
+ECHO                Deleting Microsoft Office cache..
 ECHO                Удаление кэша Microsoft Office..
 ECHO                [32m███████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -650,7 +650,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting the Adobe cache..
+ECHO                Deleting Adobe cache..
 ECHO                Удаление кэша Adobe..
 ECHO                [32m███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -672,7 +672,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting the RedGiant cache..
+ECHO                Deleting RedGiant cache..
 ECHO                Удаление кэша RedGiant..
 ECHO                [32m███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -735,7 +735,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting the Apple cache..
+ECHO                Deleting Apple cache..
 ECHO                Удаление кэша Apple..
 ECHO                [32m███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -788,7 +788,7 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting the Minecraft cache..
+ECHO                Deleting Minecraft cache..
 ECHO                Удаление кэша Minecraft..
 ECHO                [32m███████████████████████████████░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -1141,8 +1141,8 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting Firefox cache..
-ECHO                Удаление кэша Firefox..
+ECHO                Deleting Mozilla Firefox cache..
+ECHO                Удаление кэша Mozilla Firefox..
 ECHO                [32m████████████████████████████████████████░░░░░░░░░░
 ECHO.
 ECHO.
@@ -1242,8 +1242,8 @@ COLOR f9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting BraveBrowser cache..
-ECHO                Удаление кэша BraveBrowser..
+ECHO                Deleting Brave Browser cache..
+ECHO                Удаление кэша Brave Browser..
 ECHO                [32m████████████████████████████████████████░░░░░░░░░░
 ECHO.
 ECHO.
