@@ -8,7 +8,7 @@ This batch script will remove the system cache and unnecessary files:
 - Temp
 - Windows Update
 - Logs
-- Unnecessary Windows folders 
+- Unnecessary Windows folders  
   Ненужные папки Windows
 - Memory dumps (Дампы памяти)
 - SRUDB.dat
@@ -25,7 +25,7 @@ This batch script will remove the system cache and unnecessary files:
 - Disable hibernation (Отключить гибернацию)
 - RAM (Оперативная память)
 
-It will also clear the cache of programs such as:
+It will also clear the cache of programs such as:  
 А так же очистит кэш программ таких как:
 - Microsoft Store
 - OneDrive
