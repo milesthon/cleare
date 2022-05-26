@@ -10,20 +10,28 @@ This batch script will remove the system cache and unnecessary files:
 - Logs
 - Unnecessary Windows folders  
   Ненужные папки Windows
-- Memory dumps (Дампы памяти)
+- Memory dumps  
+  Дампы памяти
 - SRUDB.dat
 - C:\Windows\servicing\LCU
 - C:\Windows\WinSxS
-- Unnecessary folders in system32 (fix) (Ненужные папки в system32 (фикс))
-- Disable program cache (Отключить програмный кэш)
-- Windows history (История Windows)
-- History of last opened files (История последних открытых файлов)
-- Network shortcuts (Сетевые ярлыки)
+- Unnecessary folders in system32 (fix)  
+  Ненужные папки в system32 (фикс)
+- Disable program cache  
+  Отключить програмный кэш
+- Windows history  
+  История Windows
+- History of last opened files  
+  История последних открытых файлов
+- Network shortcuts  
+  Сетевые ярлыки
 - DNS cache
 - ARP cache
 - RDP cache
-- Disable hibernation (Отключить гибернацию)
-- RAM (Оперативная память)
+- Disable hibernation  
+  Отключить гибернацию
+- RAM  
+  Оперативная память
 
 It will also clear the cache of programs such as:  
 А так же очистит кэш программ таких как:
