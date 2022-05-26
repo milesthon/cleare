@@ -294,7 +294,7 @@ COLOR F9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Cleaning up the servicing\LCU folder..
+ECHO                Cleaning up servicing\LCU folder..
 ECHO                Очистка папки servicing\LCU..
 ECHO                [32m████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -310,7 +310,7 @@ COLOR F9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Cleaning up the WinSxS folder..
+ECHO                Cleaning up WinSxS folder..
 ECHO                Очистка папки WinSxS..
 ECHO                [32m█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
@@ -378,7 +378,7 @@ COLOR F9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Delete the history of the last opened files.
+ECHO                Delete history of last opened files..
 ECHO                Удаление истории последних открытых файлов..
 ECHO                [32m███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
