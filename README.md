@@ -8,7 +8,8 @@ This batch script will remove the system cache and unnecessary files:
 - Temp
 - Windows Update
 - Logs
-- Unnecessary Windows folders (Ненужные папки Windows)
+- Unnecessary Windows folders 
+  Ненужные папки Windows
 - Memory dumps (Дампы памяти)
 - SRUDB.dat
 - C:\Windows\servicing\LCU
