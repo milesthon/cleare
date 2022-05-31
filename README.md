@@ -82,6 +82,7 @@ It will also clear the cache of programs such as:
 - Atom
 - Vivaldi
 - Brave Browser
+- Comodo Browser
 - SageThumbs
 ***
 by mmichaelKo
