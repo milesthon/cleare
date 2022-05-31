@@ -1459,6 +1459,29 @@ COLOR F9
 ECHO.
 ECHO.
 ECHO.
+ECHO                Deleting Comodo Dragon Browser cache..
+ECHO                Удаление кэша Comodo Dragon Browser..
+ECHO                [32m[5m███████████████████████████████████████████████░░░
+ECHO.
+ECHO.
+ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\Crashpad\*'                      -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\Cache\*'                       -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\Code Cache\*'                  -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\GPUCache\*'                    -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\Service Worker\CacheStorage\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\Service Worker\ScriptCache\*'  -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\GrShaderCache\*'                 -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\ShaderCache\*'                   -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR F9
+ECHO.
+ECHO.
+ECHO.
 ECHO                Clearing cache of fonts and icons..
 ECHO                Очистка кэша шрифтов и значков..
 ECHO                [32m[5m████████████████████████████████████████████████░░
