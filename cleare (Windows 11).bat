@@ -588,8 +588,8 @@ COLOR F9
 ECHO.
 ECHO.
 ECHO.
-ECHO                Deleting RedGiant cache..
-ECHO                Удаление кэша RedGiant..
+ECHO                Deleting MaxonApp (RedGiant) cache..
+ECHO                Удаление кэша MaxonApp (RedGiant)..
 ECHO                [32m[5m█████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.
 ECHO.
