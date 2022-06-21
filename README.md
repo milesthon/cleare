@@ -28,6 +28,7 @@ This batch script will remove the system cache and unnecessary files:
 - DNS cache
 - ARP cache
 - RDP cache
+- Windows 11 Widgets
 - Disable hibernation  
   Отключить гибернацию
 - RAM  
@@ -46,7 +47,14 @@ It will also clear the cache of programs such as:
 - Microsoft Teams
 - Zoom
 - Telegram Desktop
+- VK Messenger
 - Discord
+- WhatsApp Desktop
+- Viber Desktop
+- ICQ Desktop
+- 1C
+- Bitrix24
+- Slack
 - OBS
 - Streamlabs
 - Twitch Studio
@@ -64,11 +72,12 @@ It will also clear the cache of programs such as:
 - Origin
 - - EA Launcher
 - Battle.net
+- Uplay
 - Rockstar Launcher 
 - - Social Club
 - GOG
-- Windows 11 Widgets
 - Cryptnet Url Cache
+- OpenVPN Connect
 - Internet Explorer
 - Microsoft Edge
 - Google Chrome
@@ -83,6 +92,7 @@ It will also clear the cache of programs such as:
 - Vivaldi
 - Brave Browser
 - Comodo Browser
+- Pale Moon
 - SageThumbs
 ***
 by mmichaelKo
