@@ -14,6 +14,7 @@ net sess>NUL 2>&1||(powershell try{saps '%0'-Verb RunAs}catch{}&exit)
 cls
 
 MODE 62,26
+COLOR F9
 ECHO.
 ECHO.
 ECHO.

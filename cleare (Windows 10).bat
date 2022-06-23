@@ -9,6 +9,7 @@ COLOR F9
 TITLE cleare (Windows 10) by mmichaelKo
 
 MODE 62,26
+COLOR F9
 ECHO.
 ECHO.
 ECHO.
