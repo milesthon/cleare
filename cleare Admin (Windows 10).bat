@@ -7,65 +7,65 @@ setlocal EnableDelayedExpansion
 CHCP 65001>NUL
 COLOR F9
 TITLE cleare (Windows 10) by mmichaelKo
-MODE 80,10
-ECHO.&ECHO.&ECHO.&ECHO                Run as Administrator..&ECHO                Запуск от имени Администратора..&ECHO.&ECHO.&ECHO.&ECHO.
+MODE 62,8
+ECHO.&ECHO.&ECHO.&ECHO                Run as Administrator..&ECHO                Запуск от имени Администратора..&ECHO.&ECHO.
 net sess>NUL 2>&1||(powershell try{saps '%0'-Verb RunAs}catch{}&exit)
 
 cls
 
-MODE 80,26
+MODE 62,26
 ECHO.
 ECHO.
 ECHO.
 ECHO.
 CALL :COLOR F5
-CALL :ECHO "                                       ###"
+CALL :ECHO "                              ###"
 CALL :COLOR F5
-CALL :ECHO "                                    #######"
+CALL :ECHO "                           #######"
 CALL :COLOR F5
-CALL :ECHO "                                  #########" 
+CALL :ECHO "                         #########"
 CALL :COLOR F5
-CALL :ECHO "                                 #########"
+CALL :ECHO "                        #########"
 CALL :COLOR FD
-CALL :ECHO "                               ###########" /
+CALL :ECHO "                      ###########" /
 CALL :COLOR FD
 CALL :ECHO "    #####"
 CALL :COLOR FD
-CALL :ECHO "                              ###########" /
+CALL :ECHO "                     ###########" /
 CALL :COLOR FD
-CALL :ECHO "  ########" 
+CALL :ECHO "  ########"
 CALL :COLOR F1
-CALL :ECHO "                             #####" /
+CALL :ECHO "                    #####" /
 CALL :COLOR F1
-CALL :ECHO "  ###############" 
+CALL :ECHO "  ###############"
 CALL :COLOR F1
-CALL :ECHO "                             ####" /
+CALL :ECHO "                    ####" /
 CALL :COLOR F1
 CALL :ECHO "   ###############"
 CALL :COLOR F9
-CALL :ECHO "                                    #######" /
+CALL :ECHO "                           #######" /
 CALL :COLOR F9
-CALL :ECHO "  ######" 
+CALL :ECHO "  ######"
 CALL :COLOR F9
-CALL :ECHO "                                     ###" /
+CALL :ECHO "                            ###" /
 CALL :COLOR F9
 CALL :ECHO "     #####"
 CALL :COLOR F3
-CALL :ECHO "                                             ####"
+CALL :ECHO "                                    ####"
 CALL :COLOR F3
-CALL :ECHO "                                            ####"
+CALL :ECHO "                                   ####"
 CALL :COLOR F3
-CALL :ECHO "                                            ####" 
+CALL :ECHO "                                   ####"
 CALL :COLOR F3
-CALL :ECHO "                                            ####"
+CALL :ECHO "                                   ####"
 CALL :COLOR FB
-CALL :ECHO "                                            ####"
+CALL :ECHO "                                   ####"
 CALL :COLOR FB
-CALL :ECHO "                                           #####"
+CALL :ECHO "                                  #####"
 CALL :COLOR FB
-CALL :ECHO "                                            ####" 
+CALL :ECHO "                                   ####"
 CALL :COLOR FB
-CALL :ECHO "                                             ####" 
+CALL :ECHO "                                    ####"
 ping localhost -n 2 >NUL
 goto clean
 exit/b
@@ -82,19 +82,15 @@ exit/b
 
 cls
 
-MODE 80,10
+MODE 62,8
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Windows Disk Cleanup..
-ECHO                Очистка диска Windows..
-ECHO                [32m█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Windows Disk Cleanup..
+ECHO        Очистка диска Windows..
+ECHO        [32m░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Active Setup Temp Folders"                    /V StateFlags0099 /D 2 /T REG_DWORD /F 2>nul >nul
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\BranchCache"                                  /V StateFlags0099 /D 2 /T REG_DWORD /F 2>nul >nul
@@ -135,15 +131,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting temporary files..
-ECHO                Удаление временных файлов..
-ECHO                [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting temporary files..
+ECHO        Удаление временных файлов..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Windows\assembly\*\Temp\*'                                   -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Windows\assembly\Temp\*'                                     -Recurse -Force" 2>nul >nul
@@ -160,15 +152,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Removing Windows update files..
-ECHO                Удаление файлов обновления Windows..
-ECHO                [32m███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Removing Windows update files..
+ECHO        Удаление файлов обновления Windows..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\$GetCurrent'                                                                                         -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\$SysReset'                                                                                           -Recurse -Force" 2>nul >nul
@@ -189,15 +177,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Removing logs..
-ECHO                Удаление логов..
-ECHO                [32m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Removing logs..
+ECHO        Удаление логов..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Windows\*.log'                                                                                          -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Windows\inf\*.log'                                                                                      -Recurse -Force" 2>nul >nul
@@ -232,15 +216,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Removing unnecessary Windows folders..
-ECHO                Удаление ненужных папок Windows..
-ECHO                [32m█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Removing unnecessary Windows folders..
+ECHO        Удаление ненужных папок Windows..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\AMD'      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\INTEL'    -Recurse -Force" 2>nul >nul
@@ -253,15 +233,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting memory dumps..
-ECHO                Удаление дампов памяти..
-ECHO                [32m██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting memory dumps..
+ECHO        Удаление дампов памяти..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Windows\ServiceProfiles\LocalService\AppData\Local\CrashDumps\*'   -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Windows\ServiceProfiles\NetworkService\AppData\Local\CrashDumps\*' -Recurse -Force" 2>nul >nul
@@ -273,15 +249,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting SRUDB.dat..
-ECHO                Удаление SRUDB.dat..
-ECHO                [32m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting SRUDB.dat..
+ECHO        Удаление SRUDB.dat..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 net stop DPS                                                                  2>nul >nul
 PowerShell -command "Remove-Item 'C:\Windows\System32\sru\*' -Recurse -Force" 2>nul >nul
@@ -291,15 +263,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Cleaning up servicing\LCU folder..
-ECHO                Очистка папки servicing\LCU..
-ECHO                [32m████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Cleaning up servicing\LCU folder..
+ECHO        Очистка папки servicing\LCU..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Windows\servicing\LCU\*' -Recurse -Force" 2>nul >nul
 
@@ -307,15 +275,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Cleaning up WinSxS folder..
-ECHO                Очистка папки WinSxS..
-ECHO                [32m█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Cleaning up WinSxS folder..
+ECHO        Очистка папки WinSxS..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 Dism.exe /Online /Cleanup-Image /StartComponentCleanup            2>nul >nul
 Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase 2>nul >nul
@@ -325,15 +289,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Removing empty unnecessary folders in system32 (fix)
-ECHO                Удаление пустых ненужных папок в system32 (фикс)..
-ECHO                [32m█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Removing empty unnecessary folders in system32..
+ECHO        Удаление пустых ненужных папок в system32..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 schtasks /change /disable /tn "\Microsoft\Windows\Management\Provisioning\Logon"                                 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Windows\System32\config\systemprofile\AppData\Local\*.tmp' -Recurse -Force" 2>nul >nul
@@ -342,15 +302,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Disable program cache..
-ECHO                Отключение кэша программ..
-ECHO                [32m██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Disable program cache..
+ECHO        Отключение кэша программ..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 :: "C:\Program Files\Microsoft Visual Studio\Installer\vs_installer.exe"          --nocache 2>nul >nul
 :: "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe"    --nocache 2>nul >nul
@@ -360,14 +316,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Windows history..
-ECHO                Удаление истории Windows..
-ECHO                [32m███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Windows history..
+ECHO        Удаление истории Windows..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Windows\History\*' -Recurse -Force" 2>nul >nul
@@ -376,15 +329,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Delete history of last opened files..
-ECHO                Удаление истории последних открытых файлов..
-ECHO                [32m███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Delete history of last opened files..
+ECHO        Удаление истории последних открытых файлов..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Windows\Recent\*' -Recurse -Force" 2>nul >nul
 
@@ -392,15 +341,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Removing network shortcuts..
-ECHO                Удаление сетевых ярлыков..
-ECHO                [32m███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Removing network shortcuts..
+ECHO        Удаление сетевых ярлыков..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Windows\Network Shortcuts\*' -Recurse -Force" 2>nul >nul
 
@@ -408,15 +353,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Reset DNS cache..
-ECHO                Сброс DNS кэша..
-ECHO                [32m████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Reset DNS cache..
+ECHO        Сброс DNS кэша..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 ipconfig /flushdns    2>nul >nul
 ipconfig /registerdns 2>nul >nul
@@ -425,15 +366,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Clear ARP cache..
-ECHO                Сброс ARP кэша..
-ECHO                [32m████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Clear ARP cache..
+ECHO        Сброс ARP кэша..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 netsh interface ip delete arpcache 2>nul >nul
 
@@ -441,15 +378,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting RDP cache..
-ECHO                Удаление кэша RDP..
-ECHO                [32m████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting RDP cache..
+ECHO        Удаление кэша RDP..
+ECHO        [32m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Terminal Server Client\cache\*' -Recurse -Force" 2>nul >nul
 
@@ -457,15 +390,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Microsoft Store cache..
-ECHO                Удаление кэша Microsoft Store..
-ECHO                [32m█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Microsoft Store cache..
+ECHO        Удаление кэша Microsoft Store..
+ECHO        [32m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 WSReset.exe                      2>nul >nul
 taskkill /IM WinStore.App.exe /F 2>nul >nul
@@ -474,15 +403,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting OneDrive cache..
-ECHO                Удаление кэша OneDrive..
-ECHO                [32m██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting OneDrive cache..
+ECHO        Удаление кэша OneDrive..
+ECHO        [32m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Program Files*\Microsoft OneDrive\setup\logs\*'                                      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\OneDrive\setup\logs\*' -Recurse -Force" 2>nul >nul
@@ -494,15 +419,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Microsoft Office cache..
-ECHO                Удаление кэша Microsoft Office..
-ECHO                [32m██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Microsoft Office cache..
+ECHO        Удаление кэша Microsoft Office..
+ECHO        [32m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Office\OTele\*'                   -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Windows\SysWOW64\config\systemprofile\AppData\Local\Microsoft\Office\OTele\*'                   -Recurse -Force" 2>nul >nul
@@ -519,15 +440,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Removing Nvidia cache..
-ECHO                Удаление кэша Nvidia..
-ECHO                [32m███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Removing Nvidia cache..
+ECHO        Удаление кэша Nvidia..
+ECHO        [32m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\ProgramData\NVIDIA\*'                                                                                      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\ProgramData\NVIDIA Corporation\GeForce Experience\Logs\*.log'                                              -Recurse -Force" 2>nul >nul
@@ -563,15 +480,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Adobe cache..
-ECHO                Удаление кэша Adobe..
-ECHO                [32m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Adobe cache..
+ECHO        Удаление кэша Adobe..
+ECHO        [32m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\LocalLow\Adobe\Common\Media Cache\*'                            -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\LocalLow\Adobe\Common\Media Cache Files\*'                      -Recurse -Force" 2>nul >nul
@@ -590,15 +503,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting MaxonApp (RedGiant) cache..
-ECHO                Удаление кэша MaxonApp (RedGiant)..
-ECHO                [32m█████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting MaxonApp (RedGiant) cache..
+ECHO        Удаление кэша MaxonApp (RedGiant)..
+ECHO        [32m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\ProgramData\Maxon\Service\Downloads\*'                                                   -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\ProgramData\Red Giant\Red Giant Service\Downloads\*'                                     -Recurse -Force" 2>nul >nul
@@ -615,15 +524,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Skype сache..
-ECHO                Удаление кэша Skype..
-ECHO                [32m██████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Skype сache..
+ECHO        Удаление кэша Skype..
+ECHO        [32m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Skype for Desktop\Cache\*'                                                       -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Microsoft\Skype for Desktop\Code Cache\*'                                                  -Recurse -Force" 2>nul >nul
@@ -642,15 +547,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Microsoft Teams сache..
-ECHO                Удаление кэша Microsoft Teams..
-ECHO                [32m███████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Microsoft Teams сache..
+ECHO        Удаление кэша Microsoft Teams..
+ECHO        [32m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Teams\Cache\*'                                      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Teams\tmp\*'                                        -Recurse -Force" 2>nul >nul
@@ -671,15 +572,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Zoom сache..
-ECHO                Удаление кэша Zoom..
-ECHO                [32m████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Zoom сache..
+ECHO        Удаление кэша Zoom..
+ECHO        [32m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Zoom\data\WebviewCache\*\zoomapps\*\EBWebView\Default\Cache\Cache_Data\*'            -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Zoom\data\WebviewCache\*\zoomapps\*\EBWebView\Default\Code Cache\*'                  -Recurse -Force" 2>nul >nul
@@ -693,15 +590,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Telegram cache..
-ECHO                Удаление кэша Telegram..
-ECHO                [32m█████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Telegram cache..
+ECHO        Удаление кэша Telegram..
+ECHO        [32m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Telegram Desktop\tdata\emoji\*'                                                            -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Telegram Desktop\tdata\user_data*\cache\0\*'                                               -Recurse -Force" 2>nul >nul
@@ -714,22 +607,18 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting VK Messenger cache..
-ECHO                Удаление кэша VK Messenger..
-ECHO                [32m█████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting VK Messenger cache..
+ECHO        Удаление кэша VK Messenger..
+ECHO        [32m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\Cache\*'                                                              -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\Code Cache\*'                                                         -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\Crashpad\*'                                                           -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\GPUCache\*'                                                           -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\Service Worker\CacheStorage\*'                                        -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\Service Worker\ScriptCache\*'                                         -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\Cache\*'                                                               -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\Code Cache\*'                                                          -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\Crashpad\*'                                                            -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\GPUCache\*'                                                            -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\Service Worker\CacheStorage\*'                                         -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\VK\Service Worker\ScriptCache\*'                                          -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Packages\*VKMessenger*\LocalCache\Roaming\VK\Cache\*'                       -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Packages\*VKMessenger*\LocalCache\Roaming\VK\Code Cache\*'                  -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Packages\*VKMessenger*\LocalCache\Roaming\VK\Crashpad\*'                    -Recurse -Force" 2>nul >nul
@@ -741,15 +630,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Discord cache..
-ECHO                Удаление кэша Discord..
-ECHO                [32m██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Discord cache..
+ECHO        Удаление кэша Discord..
+ECHO        [32m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Discord\Cache\*'                       -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Discord\Code Cache\*'                  -Recurse -Force" 2>nul >nul
@@ -762,15 +647,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting WhatsApp cache..
-ECHO                Удаление кэша WhatsApp..
-ECHO                [32m██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting WhatsApp cache..
+ECHO        Удаление кэша WhatsApp..
+ECHO        [32m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\WhatsApp\Cache\*'                                                                   -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\WhatsApp\Code Cache\*'                                                              -Recurse -Force" 2>nul >nul
@@ -791,15 +672,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Viber cache..
-ECHO                Удаление кэша Viber..
-ECHO                [32m██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Viber cache..
+ECHO        Удаление кэша Viber..
+ECHO        [32m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 :: PowerShell -command "Remove-Item 'C:\Users\*\Documents\ViberDownloads\*'                    -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\ViberPC\*\QmlUrlCache\data*\*' -Recurse -Force" 2>nul >nul
@@ -811,15 +688,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting ICQ cache..
-ECHO                Удаление кэша ICQ..
-ECHO                [32m██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting ICQ cache..
+ECHO        Удаление кэша ICQ..
+ECHO        [32m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\ICQ\cache\*'           -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\ICQ\*\content.cache\*' -Recurse -Force" 2>nul >nul
@@ -830,15 +703,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting 1C cache..
-ECHO                Удаление кэша 1C..
-ECHO                [32m██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting 1C cache..
+ECHO        Удаление кэша 1C..
+ECHO        [32m█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Get-ChildItem 'C:\Users\*\AppData\Local\1C\*\'   -Recurse | Where {$_.Name -as [guid]} | Remove-Item -Force -Recurse" 2>nul >nul
 PowerShell -command "Get-ChildItem 'C:\Users\*\AppData\Roaming\1C\*\' -Recurse | Where {$_.Name -as [guid]} | Remove-Item -Force -Recurse" 2>nul >nul
@@ -847,15 +716,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Bitrix24 cache..
-ECHO                Удаление кэша Bitrix24..
-ECHO                [32m██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Bitrix24 cache..
+ECHO        Удаление кэша Bitrix24..
+ECHO        [32m█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Bitrix24\User Data\Crashpad\*'                              -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Bitrix\Desktop\*\cef_cache\Cache\*'                       -Recurse -Force" 2>nul >nul
@@ -868,15 +733,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Slack cache..
-ECHO                Удаление кэша Slack..
-ECHO                [32m██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Slack cache..
+ECHO        Удаление кэша Slack..
+ECHO        [32m█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Slack\Cache\*'                       -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Slack\Code Cache\*'                  -Recurse -Force" 2>nul >nul
@@ -889,15 +750,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting OBS cache..
-ECHO                Удаление кэша OBS..
-ECHO                [32m███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting OBS cache..
+ECHO        Удаление кэша OBS..
+ECHO        [32m████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\obs-studio\plugin_config\obs-browser\Cache\*'                                             -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\obs-studio\plugin_config\obs-browser\Code Cache\*'                                        -Recurse -Force" 2>nul >nul
@@ -916,15 +773,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Streamlabs cache..
-ECHO                Удаление кэша Streamlabs..
-ECHO                [32m███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Streamlabs cache..
+ECHO        Удаление кэша Streamlabs..
+ECHO        [32m████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\Cache\*'                                                 -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\slobs-client\Code Cache\*'                                            -Recurse -Force" 2>nul >nul
@@ -943,15 +796,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Twitch Studio cache..
-ECHO                Удаление кэша Twitch Studio..
-ECHO                [32m███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Twitch Studio cache..
+ECHO        Удаление кэша Twitch Studio..
+ECHO        [32m████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Twitch Studio\*\Cache\*'                       -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\Twitch Studio\*\Code Cache\*'                  -Recurse -Force" 2>nul >nul
@@ -964,15 +813,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Apple (iTunes) cache..
-ECHO                Удаление кэша Apple (iTunes)..
-ECHO                [32m████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Apple (iTunes) cache..
+ECHO        Удаление кэша Apple (iTunes)..
+ECHO        [32m█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\ProgramData\Apple\Installer Cache\*'                                     -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\ProgramData\Apple Computer\Installer Cache\*'                            -Recurse -Force" 2>nul >nul
@@ -986,15 +831,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Spotify cache..
-ECHO                Удаление кэша Spotify..
-ECHO                [32m█████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Spotify cache..
+ECHO        Удаление кэша Spotify..
+ECHO        [32m█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Spotify\Data\*'                                                              -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Spotify\Browser\Cache\Cache_Data\*'                                          -Recurse -Force" 2>nul >nul
@@ -1015,15 +856,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Yandex.Music cache..
-ECHO                Удаление кэша Yandex.Music..
-ECHO                [32m██████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Yandex.Music cache..
+ECHO        Удаление кэша Yandex.Music..
+ECHO        [32m█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Packages\*Yandex.Music*\LocalState\CachedCovers\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Packages\*Yandex.Music*\LocalCache\MusicCache\*'   -Recurse -Force" 2>nul >nul
@@ -1032,15 +869,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting ScreenClip cache..
-ECHO                Удаление кэша ScreenClip..
-ECHO                [32m███████████████████████████░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting ScreenClip cache..
+ECHO        Удаление кэша ScreenClip..
+ECHO        [32m█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Packages\MicrosoftWindows.Client.CBS*\TempState\ScreenClip\*' -Recurse -Force" 2>nul >nul
 
@@ -1048,15 +881,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Removing Python (pip) cache..
-ECHO                Удаление кэша Python (pip)..
-ECHO                [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Removing Python (pip) cache..
+ECHO        Удаление кэша Python (pip)..
+ECHO        [32m███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\pip\cache\*' -Recurse -Force" 2>nul >nul
 
@@ -1064,15 +893,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Removing Unity cache..
-ECHO                Удаление кэша Unity..
-ECHO                [32m█████████████████████████████░░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Removing Unity cache..
+ECHO        Удаление кэша Unity..
+ECHO        [32m███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Program Files*\Unity\Cache\*'                                                                                     -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Program Files*\Unity\Hub\Editor\*\Editor\Data\Resources\PackageManager\ProjectTemplates\libcache\*\ShaderCache\*' -Recurse -Force" 2>nul >nul
@@ -1101,15 +926,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Removing Java cache..
-ECHO                Удаление кэша Java..
-ECHO                [32m██████████████████████████████░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Removing Java cache..
+ECHO        Удаление кэша Java..
+ECHO        [32m███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\LocalLow\Sun\Java\Deployment\cache\*' -Recurse -Force" 2>nul >nul
 
@@ -1117,15 +938,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Minecraft cache..
-ECHO                Удаление кэша Minecraft..
-ECHO                [32m██████████████████████████████░░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Minecraft cache..
+ECHO        Удаление кэша Minecraft..
+ECHO        [32m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\.minecraft\webcache*\Cache\*'                             -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\.minecraft\webcache*\Code Cache\*'                        -Recurse -Force" 2>nul >nul
@@ -1140,15 +957,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Steam cache..
-ECHO                Удаление кэша Steam..
-ECHO                [32m███████████████████████████████░░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Steam cache..
+ECHO        Удаление кэша Steam..
+ECHO        [32m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Program Files*\Steam\appcache\librarycache\*.jpg'                    -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Program Files*\Steam\appcache\librarycache\*.png'                    -Recurse -Force" 2>nul >nul
@@ -1168,15 +981,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Epic Launcher cache..
-ECHO                Удаление кэша Epic Launcher..
-ECHO                [32m████████████████████████████████░░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Epic Launcher cache..
+ECHO        Удаление кэша Epic Launcher..
+ECHO        [32m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\ProgramData\Epic\EpicGamesLauncher\Data\ContentCache\*'                                              -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\ProgramData\Epic\EpicGamesLauncher\Data\EMS\EpicGamesLauncher\*.png'                                 -Recurse -Force" 2>nul >nul
@@ -1203,15 +1012,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Origin / EA Launcher cache..
-ECHO                Удаление кэша Origin / EA Launcher..
-ECHO                [32m█████████████████████████████████░░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Origin / EA Launcher cache..
+ECHO        Удаление кэша Origin / EA Launcher..
+ECHO        [32m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\ProgramData\Origin\CatalogCache\*'                                                     -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\ProgramData\Origin\DownloadCache\*'                                                    -Recurse -Force" 2>nul >nul
@@ -1233,15 +1038,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Battle.net cache..
-ECHO                Удаление кэша Battle.net..
-ECHO                [32m██████████████████████████████████░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Battle.net cache..
+ECHO        Удаление кэша Battle.net..
+ECHO        [32m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\ProgramData\Battle.net\Agent\data\cache\*'                                   -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Battle.net\Cache\*'                                    -Recurse -Force" 2>nul >nul
@@ -1257,15 +1058,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Uplay cache..
-ECHO                Удаление кэша Uplay..
-ECHO                [32m██████████████████████████████████░░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Uplay cache..
+ECHO        Удаление кэша Uplay..
+ECHO        [32m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Program Files*\Ubisoft\Ubisoft Game Launcher\cache\assets\*'                            -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Program Files*\Ubisoft\Ubisoft Game Launcher\cache\http2\Cache\*'                       -Recurse -Force" 2>nul >nul
@@ -1279,15 +1076,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Rockstar Games cache..
-ECHO                Удаление кэша Rockstar Games..
-ECHO                [32m███████████████████████████████████░░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Rockstar Games cache..
+ECHO        Удаление кэша Rockstar Games..
+ECHO        [32m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\Documents\Rockstar Games\Social Club\Launcher\Renderer\Cache\*'                       -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\Documents\Rockstar Games\Social Club\Launcher\Renderer\Code Cache\*'                  -Recurse -Force" 2>nul >nul
@@ -1306,15 +1099,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting GOG cache..
-ECHO                Удаление кэша GOG..
-ECHO                [32m████████████████████████████████████░░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting GOG cache..
+ECHO        Удаление кэша GOG..
+ECHO        [32m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\ProgramData\GOG.com\Galaxy\webcache\common\Cache\*'                       -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\ProgramData\GOG.com\Galaxy\webcache\common\Code Cache\*'                  -Recurse -Force" 2>nul >nul
@@ -1327,15 +1116,28 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting CryptnetUrlCache cache..
-ECHO                Удаление кэша CryptnetUrlCache..
-ECHO                [32m█████████████████████████████████████░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting OpenVPN Connect..
+ECHO        Удаление кэша OpenVPN Connect..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\Cache\*'                       -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\Code Cache\*'                  -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\Crashpad\*'                    -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\GPUCache\*'                    -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\Service Worker\CacheStorage\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\Service Worker\ScriptCache\*'  -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR F9
+ECHO.&ECHO.
+ECHO        Deleting CryptnetUrlCache cache..
+ECHO        Удаление кэша CryptnetUrlCache..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Windows\ServiceProfiles\LocalService\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content\*'    -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Windows\ServiceProfiles\LocalService\AppData\LocalLow\Microsoft\CryptnetUrlCache\MetaData\*'   -Recurse -Force" 2>nul >nul
@@ -1352,54 +1154,25 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting OpenVPN Connect..
-ECHO                Удаление кэша OpenVPN Connect..
-ECHO                [32m█████████████████████████████████████░░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
-CHCP 866>NUL
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\Cache\*'                       -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\Code Cache\*'                  -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\Crashpad\*'                    -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\GPUCache\*'                    -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\Service Worker\CacheStorage\*' -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\OpenVPN Connect\Service Worker\ScriptCache\*'  -Recurse -Force" 2>nul >nul
-
-cls
-
-CHCP 65001>NUL
-COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Internet Explorer cache..
-ECHO                Удаление кэша Internet Explorer..
-ECHO                [32m██████████████████████████████████████░░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Internet Explorer cache..
+ECHO        Удаление кэша Internet Explorer..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 8                                                            2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\cache\*'                      -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\cache\*'                         -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Windows\WebCache.old*' -Recurse -Force" 2>nul >nul
 
 cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Microsoft Edge cache..
-ECHO                Удаление кэша Microsoft Edge..
-ECHO                [32m███████████████████████████████████████░░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Microsoft Edge cache..
+ECHO        Удаление кэша Microsoft Edge..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Program Files*\Microsoft\EdgeUpdate\Download\*'                                 -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Edge\User Data\Crashpad\*'                      -Recurse -Force" 2>nul >nul
@@ -1416,15 +1189,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Google Chrome cache..
-ECHO                Удаление кэша Google Chrome..
-ECHO                [32m████████████████████████████████████████░░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Google Chrome cache..
+ECHO        Удаление кэша Google Chrome..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Program Files*\Google\Update\Download\*'                                                              -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\Chrome\User Data\Crashpad\*'                                             -Recurse -Force" 2>nul >nul
@@ -1493,17 +1262,13 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Yandex Browser cache..
-ECHO                Удаление кэша Yandex Browser..
-ECHO                [32m█████████████████████████████████████████░░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Yandex Browser cache..
+ECHO        Удаление кэша Yandex Browser..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
-PowerShell -command "Remove-Item 'C:\Program Files*\Yandex\YandexBrowser\Temp\*'                                            -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Program Files*\Yandex\YandexBrowser\Temp\*'                                           -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Yandex\YandexBrowser\Temp\*'                                    -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Yandex\YandexBrowser\User Data\Crashpad\*'                      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Yandex\YandexBrowser\User Data\*\Cache\Cache_Data\*'            -Recurse -Force" 2>nul >nul
@@ -1520,15 +1285,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Opera cache..
-ECHO                Удаление кэша Opera..
-ECHO                [32m██████████████████████████████████████████░░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Opera cache..
+ECHO        Удаление кэша Opera..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Opera Software\Opera GX Stable\_side_profiles\*\Cache\Cache_Data\*'              -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Opera Software\Opera GX Stable\_side_profiles\*\System Cache\Cache_Data\*'       -Recurse -Force" 2>nul >nul
@@ -1565,15 +1326,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Mozilla Firefox cache..
-ECHO                Удаление кэша Mozilla Firefox..
-ECHO                [32m███████████████████████████████████████████░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Mozilla Firefox cache..
+ECHO        Удаление кэша Mozilla Firefox..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\ProgramData\Mozilla*\updates\*\updates\*'                          -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Mozilla\Firefox\Profiles\*\cache2\entries\*' -Recurse -Force" 2>nul >nul
@@ -1582,15 +1339,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Cent Browser cache..
-ECHO                Удаление кэша Cent Browser..
-ECHO                [32m████████████████████████████████████████████░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Cent Browser cache..
+ECHO        Удаление кэша Cent Browser..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\CentBrowser\User Data\Crashpad\*'                      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\CentBrowser\User Data\*\Cache\*'                       -Recurse -Force" 2>nul >nul
@@ -1606,17 +1359,13 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Atom cache..
-ECHO                Удаление кэша Atom..
-ECHO                [32m█████████████████████████████████████████████░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Atom cache..
+ECHO        Удаление кэша Atom..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
-PowerShell -command "Remove-Item 'C:\Program Files*\Mail.Ru\Atom\Temp\*'                                                              -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Program Files*\Mail.Ru\Atom\Temp\*'                                                             -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Mail.Ru\Atom\Temp\*'                                                      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Mail.Ru\Atom\User Data\Crashpad\*'                                        -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Mail.Ru\Atom\User Data\*\Cache\Cache_Data\*'                              -Recurse -Force" 2>nul >nul
@@ -1638,15 +1387,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Vivaldi cache..
-ECHO                Удаление кэша Vivaldi..
-ECHO                [32m██████████████████████████████████████████████░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Vivaldi cache..
+ECHO        Удаление кэша Vivaldi..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Vivaldi\User Data\Crashpad\*'                                              -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Vivaldi\User Data\*\Cache\Cache_Data\*'                                    -Recurse -Force" 2>nul >nul
@@ -1668,17 +1413,13 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Brave Browser cache..
-ECHO                Удаление кэша Brave Browser..
-ECHO                [32m███████████████████████████████████████████████░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Brave Browser cache..
+ECHO        Удаление кэша Brave Browser..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
-PowerShell -command "Remove-Item 'C:\Program Files*\BraveSoftware\Update\Download\*'                                               -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Program Files*\BraveSoftware\Update\Download\*'                                              -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\BraveSoftware\Brave-Browser\User Data\Crashpad\*'                      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\BraveSoftware\Brave-Browser\User Data\*\Cache\Cache_Data\*'            -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\BraveSoftware\Brave-Browser\User Data\*\Code Cache\*'                  -Recurse -Force" 2>nul >nul
@@ -1694,15 +1435,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Comodo Dragon Browser cache..
-ECHO                Удаление кэша Comodo Dragon Browser..
-ECHO                [32m███████████████████████████████████████████████░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Comodo Dragon Browser cache..
+ECHO        Удаление кэша Comodo Dragon Browser..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\Crashpad\*'                      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\Cache\*'                       -Recurse -Force" 2>nul >nul
@@ -1717,15 +1454,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting Pale Moon cache..
-ECHO                Удаление кэша Pale Moon..
-ECHO                [32m███████████████████████████████████████████░░░░░░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting Pale Moon cache..
+ECHO        Удаление кэша Pale Moon..
+ECHO        [32m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Moonchild Productions\Pale Moon\Profiles\*\cache2\entries\*' -Recurse -Force" 2>nul >nul
 
@@ -1733,15 +1466,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Deleting a potential Cache..
-ECHO                Удаление потенциального кэша..
-ECHO                [32m████████████████████████████████████████████████░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Deleting a potential Cache..
+ECHO        Удаление потенциального кэша..
+ECHO        [32m██████████████████████████████████████████░░░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\*\Cache\*'                                                      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\*\Code Cache\*'                                                 -Recurse -Force" 2>nul >nul
@@ -1784,15 +1513,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Clearing cache of fonts and icons..
-ECHO                Очистка кэша шрифтов и значков..
-ECHO                [32m████████████████████████████████████████████████░░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Clearing cache of fonts and icons..
+ECHO        Очистка кэша шрифтов и значков..
+ECHO        [32m████████████████████████████████████████████░░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 taskkill /F /IM Explorer.exe                                                                                              2>nul >nul
 NET Stop "FontCache"                                                                                                      2>nul >nul
@@ -1810,15 +1535,11 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Disabling hibernation..
-ECHO                Отключение гибернации..
-ECHO                [32m█████████████████████████████████████████████████░
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Disabling hibernation..
+ECHO        Отключение гибернации..
+ECHO        [32m█████████████████████████████████████████████░░░
+ECHO.&ECHO.
 CHCP 866>NUL
 powercfg.exe /hibernate off 2>nul >nul
 
@@ -1826,22 +1547,17 @@ cls
 
 CHCP 65001>NUL
 COLOR F9
-ECHO.
-ECHO.
-ECHO.
-ECHO                Clearing RAM..
-ECHO                Очистка оперативной памяти..
-ECHO                [32m██████████████████████████████████████████████████
-ECHO.
-ECHO.
-ECHO.
+ECHO.&ECHO.
+ECHO        Clearing RAM..
+ECHO        Очистка оперативной памяти..
+ECHO        [32m███████████████████████████████████████████████░
+ECHO.&ECHO.
 CHCP 866>NUL
-CD "C:\Windows\SysWOW64\" 2>nul >nul
 rundll32.exe              2>nul >nul
 
 cls
 
 setlocal DisableDelayedExpansion
 CHCP 65001>NUL
-PowerShell -command "& {Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('Cache and junk files removed successfully!                            Кэш и ненужные файлы успешно удалены!', 'Successful cleaning | Успешная очистка', 'OK', [System.Windows.Forms.MessageBoxIcon]::Information);}"
+PowerShell -command "& {Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\"Cache and junk files removed successfully! `nКэш и ненужные файлы успешно удалены!\", \"Successful cleaning ^| Успешная очистка\", \"OK\", [System.Windows.Forms.MessageBoxIcon]::Information);}"
 EXIT
