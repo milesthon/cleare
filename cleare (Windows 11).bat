@@ -416,6 +416,43 @@ cls
 CHCP 65001>NUL
 COLOR F9
 ECHO.&ECHO.
+ECHO        Deleting Google Drive cache..
+ECHO        Удаление кэша Google Drive..
+ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\DriveFS\*\content_cache\*'                       -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\DriveFS\*\thumbnails_cache\*'                    -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\DriveFS\cef_cache\Cache\*'                       -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\DriveFS\cef_cache\Code Cache\*'                  -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\DriveFS\cef_cache\GPUCache\*'                    -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\DriveFS\cef_cache\Service Worker\CacheStorage\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\DriveFS\cef_cache\Service Worker\ScriptCache\*'  -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Google\DriveFS\Crashpad\*'                              -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR F9
+ECHO.&ECHO.
+ECHO        Deleting Dropbox cache..
+ECHO        Удаление кэша Dropbox..
+ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Program Files*\Dropbox\Update\Download\*'            -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Program Files*\Dropbox\Update\Install\*'             -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Program Files*\Dropbox\Update\Offline\*'             -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\Dropbox\.dropbox.cache\*'                    -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Dropbox\avatar_cache\*'        -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Dropbox\Crashpad\*'            -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Dropbox\instance*\sync\temp\*' -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR F9
+ECHO.&ECHO.
 ECHO        Deleting Microsoft Office cache..
 ECHO        Удаление кэша Microsoft Office..
 ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -904,6 +941,23 @@ ECHO        [32m[5m███████████████░░░░�
 ECHO.&ECHO.
 CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\pip\cache\*' -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR F9
+ECHO.&ECHO.
+ECHO        Removing GitHub Desktop cache..
+ECHO        Удаление кэша GitHub Desktop..
+ECHO        [32m[5m███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\Cache\Cache_Data\*'            -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\Code Cache\*'                  -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\GPUCache\*'                    -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\Crashpad\*'                    -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\Service Worker\CacheStorage\*' -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\Service Worker\ScriptCache\*'  -Recurse -Force" 2>nul >nul
 
 cls
 
@@ -1480,6 +1534,7 @@ CHCP 866>NUL
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\Crashpad\*'                      -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\Cache\*'                       -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\Code Cache\*'                  -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\File System\*'                 -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\GPUCache\*'                    -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\Service Worker\CacheStorage\*' -Recurse -Force" 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Comodo\Dragon\User Data\*\Service Worker\ScriptCache\*'  -Recurse -Force" 2>nul >nul
