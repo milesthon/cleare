@@ -932,6 +932,18 @@ cls
 CHCP 65001>NUL
 COLOR F9
 ECHO.&ECHO.
+ECHO        Removing Microsoft Visual Studio cache..
+ECHO        Удаление кэша Microsoft Visual Studio..
+ECHO        [32m[5m███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+CHCP 866>NUL
+PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\VisualStudio\*\ComponentModelCache\*' -Recurse -Force" 2>nul >nul
+
+cls
+
+CHCP 65001>NUL
+COLOR F9
+ECHO.&ECHO.
 ECHO        Removing GitHub Desktop cache..
 ECHO        Удаление кэша GitHub Desktop..
 ECHO        [32m███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
