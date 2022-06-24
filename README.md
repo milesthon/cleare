@@ -66,6 +66,7 @@ It will also clear the cache of programs such as:
 - Clipchamp
 - Screen Clip
 - Python (pip)
+- Microsoft Visual Studio
 - GitHub Desktop
 - Unity
 - Java
