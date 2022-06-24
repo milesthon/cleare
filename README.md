@@ -38,6 +38,8 @@ It will also clear the cache of programs such as:
 А так же очистит кэш программ таких как:
 - Microsoft Store
 - OneDrive
+- Google Drive
+- Dropbox
 - Microsoft Office
 - Nvidia GeForce Experience
 - Adobe
@@ -64,6 +66,7 @@ It will also clear the cache of programs such as:
 - Clipchamp
 - Screen Clip
 - Python (pip)
+- GitHub Desktop
 - Unity
 - Java
 - Minecraft
