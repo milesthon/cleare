@@ -753,15 +753,15 @@ ECHO        Removing GitHub Desktop cache..
 ECHO        Удаление кэша GitHub Desktop..
 ECHO        [32m[5m███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop')                               ^
-{Remove-Item                                                                                                          ^
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Cache\Cache_Data\*'            , ^
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Code Cache\*'                  , ^
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\GPUCache\*'                    , ^
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Crashpad\*'                    , ^
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Service Worker\CacheStorage\*' , ^
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Service Worker\ScriptCache\*'    ^
--Recurse -Force}                                                                                             2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop') ^
+{Remove-Item                                                                            ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Cache\Cache_Data\*'               , ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Code Cache\*'                     , ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\GPUCache\*'                       , ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Crashpad\*'                       , ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Service Worker\CacheStorage\*'    , ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Service Worker\ScriptCache\*'       ^
+-Recurse -Force}                                                               2>nul >nul
 
 cls
 

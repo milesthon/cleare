@@ -282,7 +282,11 @@ ECHO        Отключение кэша программ..
 ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
 "C:\Program Files\Microsoft Visual Studio\Installer\vs_installer.exe"          --nocache 2>nul >nul
+taskkill /F /IM vs_installer.exe                                                         2>nul >nul
+taskkill /F /IM setup.exe                                                                2>nul >nul
 "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe"    --nocache 2>nul >nul
+taskkill /F /IM vs_installer.exe                                                         2>nul >nul
+taskkill /F /IM setup.exe                                                                2>nul >nul
 PowerShell -command "Remove-Item 'C:\Windows\Installer\*.tmp'           -Recurse -Force" 2>nul >nul
 
 cls
@@ -965,15 +969,15 @@ ECHO        Removing GitHub Desktop cache..
 ECHO        Удаление кэша GitHub Desktop..
 ECHO        [32m[5m███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Roaming\GitHub Desktop')                               ^
-{Remove-Item                                                                                                 ^
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\Cache\Cache_Data\*'            , ^
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\Code Cache\*'                  , ^
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\GPUCache\*'                    , ^
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\Crashpad\*'                    , ^
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\Service Worker\CacheStorage\*' , ^
-PowerShell -command "Remove-Item 'C:\Users\*\AppData\Roaming\GitHub Desktop\Service Worker\ScriptCache\*'    ^
--Recurse -Force}                                                                                    2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Roaming\GitHub Desktop') ^
+{Remove-Item                                                                   ^
+'C:\Users\*\AppData\Roaming\GitHub Desktop\Cache\Cache_Data\*'               , ^
+'C:\Users\*\AppData\Roaming\GitHub Desktop\Code Cache\*'                     , ^
+'C:\Users\*\AppData\Roaming\GitHub Desktop\GPUCache\*'                       , ^
+'C:\Users\*\AppData\Roaming\GitHub Desktop\Crashpad\*'                       , ^
+'C:\Users\*\AppData\Roaming\GitHub Desktop\Service Worker\CacheStorage\*'    , ^
+'C:\Users\*\AppData\Roaming\GitHub Desktop\Service Worker\ScriptCache\*'       ^
+-Recurse -Force}                                                      2>nul >nul
 
 cls
 
