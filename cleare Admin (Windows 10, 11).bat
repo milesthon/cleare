@@ -281,12 +281,8 @@ ECHO        Disable program cache..
 ECHO        Отключение кэша программ..
 ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-"C:\Program Files\Microsoft Visual Studio\Installer\vs_installer.exe"          --nocache 2>nul >nul
-taskkill /F /IM vs_installer.exe                                                         2>nul >nul
-taskkill /F /IM setup.exe                                                                2>nul >nul
-"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe"    --nocache 2>nul >nul
-taskkill /F /IM vs_installer.exe                                                         2>nul >nul
-taskkill /F /IM setup.exe                                                                2>nul >nul
+:: "C:\Program Files\Microsoft Visual Studio\Installer\vs_installer.exe"          --nocache 2>nul >nul
+:: "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe"    --nocache 2>nul >nul
 PowerShell -command "Remove-Item 'C:\Windows\Installer\*.tmp'           -Recurse -Force" 2>nul >nul
 
 cls
