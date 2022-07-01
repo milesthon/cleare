@@ -244,16 +244,6 @@ cls
 
 COLOR F9
 ECHO.&ECHO.
-ECHO        Cleaning up servicing\LCU folder..
-ECHO        Очистка папки servicing\LCU..
-ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.&ECHO.
-PowerShell -command "Remove-Item 'C:\Windows\servicing\LCU\*' -Recurse -Force" 2>nul >nul
-
-cls
-
-COLOR F9
-ECHO.&ECHO.
 ECHO        Cleaning up WinSxS folder..
 ECHO        Очистка папки WinSxS..
 ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
