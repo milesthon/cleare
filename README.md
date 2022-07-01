@@ -13,7 +13,6 @@ This batch script will remove the system cache and unnecessary files:
 - Memory dumps  
   Дампы памяти
 - SRUDB.dat
-- C:\Windows\servicing\LCU
 - C:\Windows\WinSxS
 - Unnecessary folders in system32 (fix)  
   Ненужные папки в system32 (фикс)
