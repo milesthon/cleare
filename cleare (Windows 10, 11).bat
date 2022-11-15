@@ -948,6 +948,24 @@ cls
 
 COLOR F9
 ECHO.&ECHO.
+ECHO        Deleting SteelSeries GG cache..
+ECHO        Удаление кэша SteelSeries GG..
+ECHO        [32m[5m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+PowerShell -Command if (Test-Path 'C:\ProgramData\SteelSeries\GG')                          ^
+{Remove-Item                                                                                ^
+'C:\Users\%UserName%\AppData\Roaming\steelseries-gg-client\Cache\*'                       , ^
+'C:\Users\%UserName%\AppData\Roaming\steelseries-gg-client\Code Cache\*'                  , ^
+'C:\Users\%UserName%\AppData\Roaming\steelseries-gg-client\Crashpad\*'                    , ^
+'C:\Users\%UserName%\AppData\Roaming\steelseries-gg-client\GPUCache\*'                    , ^
+'C:\Users\%UserName%\AppData\Roaming\steelseries-gg-client\Service Worker\CacheStorage\*' , ^
+'C:\Users\%UserName%\AppData\Roaming\steelseries-gg-client\Service Worker\ScriptCache\*'    ^
+-Recurse -Force}                                                                   2>nul >nul
+
+cls
+
+COLOR F9
+ECHO.&ECHO.
 ECHO        Deleting OpenVPN Connect..
 ECHO        Удаление кэша OpenVPN Connect..
 ECHO        [32m[5m████████████████████████████░░░░░░░░░░░░░░░░░░░░
