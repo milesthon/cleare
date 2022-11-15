@@ -79,6 +79,7 @@ It will also clear the cache of programs such as:
 - Rockstar Launcher 
 - - Social Club
 - GOG
+- SteelSeries GG
 - OpenVPN Connect
 - Cryptnet Url Cache
 - Internet Explorer
