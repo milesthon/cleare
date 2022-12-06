@@ -345,7 +345,7 @@ ECHO        Deleting Microsoft Store cache..
 ECHO        Удаление кэша Microsoft Store..
 ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-WSReset.exe                      2>nul >nul
+start /min WSReset.exe           2>nul >nul
 taskkill /IM WinStore.App.exe /F 2>nul >nul
 
 cls
@@ -845,6 +845,7 @@ PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Apple')            ^
 {Remove-Item                                                                   ^
 'C:\ProgramData\Apple\Installer Cache\*'                                     , ^
 'C:\ProgramData\Apple Computer\Installer Cache\*'                            , ^
+'C:\Users\*\Music\iTunes\Album Artwork\Cache\*'                              , ^
 'C:\Users\*\AppData\Local\Apple\Apple Software Update\*'                     , ^
 'C:\Users\*\AppData\Local\Apple Computer\iTunes\PlayCache\*'                 , ^
 'C:\Users\*\AppData\Local\Apple Computer\iTunes\SubscriptionPlayCache\*'     , ^
@@ -1039,8 +1040,10 @@ ECHO        [32m[5m████████████████░░░�
 ECHO.&ECHO.
 PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Steam')        ^
 {Remove-Item                                                               ^
+'C:\Program Files*\Steam\appcache\httpcache\*'                           , ^
 'C:\Program Files*\Steam\appcache\librarycache\*.jpg'                    , ^
 'C:\Program Files*\Steam\appcache\librarycache\*.png'                    , ^
+'C:\Program Files*\Steam\depotcache\*'                                   , ^
 'C:\Program Files*\Steam\steam\cached\*'                                 , ^
 'C:\Program Files*\Steam\SteamApps\downloading\*'                        , ^
 'C:\Program Files*\Steam\SteamApps\temp\*'                               , ^
@@ -1141,11 +1144,11 @@ cls
 
 COLOR F9
 ECHO.&ECHO.
-ECHO        Deleting Uplay cache..
-ECHO        Удаление кэша Uplay..
+ECHO        Deleting Ubisoft Connect (Uplay) cache..
+ECHO        Удаление кэша Ubisoft Connect (Uplay)..
 ECHO        [32m[5m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Battle.net')                      ^
+PowerShell -Command if (Test-Path 'C:\Program Files*\Ubisoft\Ubisoft Game Launcher')          ^
 {Remove-Item                                                                                  ^
 'C:\Program Files*\Ubisoft\Ubisoft Game Launcher\cache\assets\*'                            , ^
 'C:\Program Files*\Ubisoft\Ubisoft Game Launcher\cache\http2\Cache\*'                       , ^

@@ -166,7 +166,7 @@ ECHO        Deleting Microsoft Store cache..
 ECHO        Удаление кэша Microsoft Store..
 ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-WSReset.exe                      2>nul >nul
+start /min WSReset.exe           2>nul >nul
 taskkill /IM WinStore.App.exe /F 2>nul >nul
 
 cls
@@ -643,6 +643,7 @@ ECHO        [32m[5m█████████████░░░░░░�
 ECHO.&ECHO.
 PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Apple')            ^
 {Remove-Item                                                                            ^
+'C:\Users\%UserName%\Music\iTunes\Album Artwork\Cache\*'                              , ^
 'C:\Users\%UserName%\AppData\Local\Apple\Apple Software Update\*'                     , ^
 'C:\Users\%UserName%\AppData\Local\Apple Computer\iTunes\PlayCache\*'                 , ^
 'C:\Users\%UserName%\AppData\Local\Apple Computer\iTunes\SubscriptionPlayCache\*'     , ^
