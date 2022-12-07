@@ -345,7 +345,7 @@ ECHO        Deleting Microsoft Store cache..
 ECHO        Удаление кэша Microsoft Store..
 ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-start /min WSReset.exe           2>nul >nul
+start /min /wait WSReset.exe     2>nul >nul
 taskkill /IM WinStore.App.exe /F 2>nul >nul
 
 cls
