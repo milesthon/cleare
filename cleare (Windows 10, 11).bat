@@ -80,8 +80,11 @@ ECHO        Deleting temporary files..
 ECHO        Удаление временных файлов..
 ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Temp\*'                                -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\AC\Temp\*'                  -Recurse -Force" 2>nul >nul
+PowerShell -Command                                        ^
+Remove-Item                                                ^
+'C:\Users\%UserName%\AppData\Local\Temp\*'               , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\AC\Temp\*'   ^
+-Recurse -Force                                   2>nul >nul
 
 cls
 
@@ -91,10 +94,13 @@ ECHO        Removing logs..
 ECHO        Удаление логов..
 ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\WebCache\*.log'                                                 -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\CLR_v4.0\UsageLogs\*.log'                                               -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\SettingSync\*.log'                                              -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\CLR_v4.0_32\UsageLogs\*.log'                                            -Recurse -Force" 2>nul >nul
+PowerShell -Command                                                         ^
+Remove-Item                                                                 ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\WebCache\*.log'      , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\CLR_v4.0\UsageLogs\*.log'    , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\SettingSync\*.log'   , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\CLR_v4.0_32\UsageLogs\*.log'   ^
+-Recurse -Force                                                    2>nul >nul
 
 cls
 
@@ -104,7 +110,7 @@ ECHO        Deleting memory dumps..
 ECHO        Удаление дампов памяти..
 ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\CrashDumps\*'                                -Recurse -Force" 2>nul >nul
+PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\CrashDumps\*' -Recurse -Force" 2>nul >nul
 
 cls
 
@@ -166,8 +172,8 @@ ECHO        Deleting Microsoft Store cache..
 ECHO        Удаление кэша Microsoft Store..
 ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-start /min /wait WSReset.exe     2>nul >nul
-taskkill /IM WinStore.App.exe /F 2>nul >nul
+Start /min /wait WSReset.exe     2>nul >nul
+TaskKill /IM WinStore.App.exe /F 2>nul >nul
 
 cls
 
@@ -177,8 +183,11 @@ ECHO        Deleting OneDrive cache..
 ECHO        Удаление кэша OneDrive..
 ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\OneDrive\logs\Common\*'                              -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\OneDrive\setup\logs\*'                               -Recurse -Force" 2>nul >nul
+PowerShell -Command                                                    ^
+Remove-Item                                                            ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\OneDrive\logs\Common\*' , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\OneDrive\setup\logs\*'    ^
+-Recurse -Force                                               2>nul >nul
 
 cls
 
@@ -189,7 +198,7 @@ ECHO        Удаление кэша Google Drive..
 ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
 PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Google\DriveFS')        ^
-{Remove-Item                                                                        ^
+{Remove-Item                                                                                 ^
 'C:\Users\%UserName%\AppData\Local\Google\DriveFS\*\content_cache\*'                       , ^
 'C:\Users\%UserName%\AppData\Local\Google\DriveFS\*\thumbnails_cache\*'                    , ^
 'C:\Users\%UserName%\AppData\Local\Google\DriveFS\cef_cache\Cache\*'                       , ^
@@ -198,7 +207,7 @@ PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Google\Driv
 'C:\Users\%UserName%\AppData\Local\Google\DriveFS\cef_cache\Service Worker\CacheStorage\*' , ^
 'C:\Users\%UserName%\AppData\Local\Google\DriveFS\cef_cache\Service Worker\ScriptCache\*'  , ^
 'C:\Users\%UserName%\AppData\Local\Google\DriveFS\Crashpad\*'                                ^
--Recurse -Force}                                                           2>nul >nul
+-Recurse -Force}                                                                    2>nul >nul
 
 cls
 
@@ -385,7 +394,6 @@ PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\Zoom')   
 'C:\Users\%UserName%\AppData\Roaming\Zoom\data\WebviewCache\*\zoomapps\*\EBWebView\ShaderCache\*'                           ^
 -Recurse -Force}                                                                                                   2>nul >nul
 
-
 cls
 
 COLOR F9
@@ -442,15 +450,15 @@ ECHO        Deleting Discord cache..
 ECHO        Удаление кэша Discord..
 ECHO        [32m[5m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\Discord') ^
-{Remove-Item                                                                     ^
-'C:\Users\%UserName%\AppData\Roaming\Discord\Cache\*'                          , ^
-'C:\Users\%UserName%\AppData\Roaming\Discord\Code Cache\*'                     , ^
-'C:\Users\%UserName%\AppData\Roaming\Discord\Crashpad\*'                       , ^
-'C:\Users\%UserName%\AppData\Roaming\Discord\GPUCache\*'                       , ^
-'C:\Users\%UserName%\AppData\Roaming\Discord\Service Worker\CacheStorage\*'    , ^
-'C:\Users\%UserName%\AppData\Roaming\Discord\Service Worker\ScriptCache\*'       ^
--Recurse -Force}                                                        2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\Discord')   ^
+{Remove-Item                                                                       ^
+'C:\Users\%UserName%\AppData\Roaming\Discord\Cache\*'                            , ^
+'C:\Users\%UserName%\AppData\Roaming\Discord\Code Cache\*'                       , ^
+'C:\Users\%UserName%\AppData\Roaming\Discord\Crashpad\*'                         , ^
+'C:\Users\%UserName%\AppData\Roaming\Discord\GPUCache\*'                         , ^
+'C:\Users\%UserName%\AppData\Roaming\Discord\Service Worker\CacheStorage\*'      , ^
+'C:\Users\%UserName%\AppData\Roaming\Discord\Service Worker\ScriptCache\*'         ^
+-Recurse -Force}                                                          2>nul >nul
 
 cls
 
@@ -506,13 +514,13 @@ ECHO        Deleting ICQ cache..
 ECHO        Удаление кэша ICQ..
 ECHO        [32m[5m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\ICQ') ^
-{Remove-Item                                                                 ^
-'C:\Users\%UserName%\AppData\Roaming\ICQ\cache\*'                          , ^
-'C:\Users\%UserName%\AppData\Roaming\ICQ\*\content.cache\*'                , ^
-'C:\Users\%UserName%\AppData\Roaming\ICQ\*\info\cache'                     , ^
-'C:\Users\%UserName%\AppData\Roaming\ICQ\*\stickers\*'                       ^
--Recurse -Force}                                                    2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\ICQ')   ^
+{Remove-Item                                                                   ^
+'C:\Users\%UserName%\AppData\Roaming\ICQ\cache\*'                            , ^
+'C:\Users\%UserName%\AppData\Roaming\ICQ\*\content.cache\*'                  , ^
+'C:\Users\%UserName%\AppData\Roaming\ICQ\*\info\cache'                       , ^
+'C:\Users\%UserName%\AppData\Roaming\ICQ\*\stickers\*'                         ^
+-Recurse -Force}                                                      2>nul >nul
 
 cls
 
@@ -557,15 +565,15 @@ ECHO        Deleting Slack cache..
 ECHO        Удаление кэша Slack..
 ECHO        [32m[5m█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\Slack') ^
-{Remove-Item                                                                   ^
-'C:\Users\%UserName%\AppData\Roaming\Slack\Cache\*'                          , ^
-'C:\Users\%UserName%\AppData\Roaming\Slack\Code Cache\*'                     , ^
-'C:\Users\%UserName%\AppData\Roaming\Slack\Crashpad\*'                       , ^
-'C:\Users\%UserName%\AppData\Roaming\Slack\GPUCache\*'                       , ^
-'C:\Users\%UserName%\AppData\Roaming\Slack\Service Worker\CacheStorage\*'    , ^
-'C:\Users\%UserName%\AppData\Roaming\Slack\Service Worker\ScriptCache\*'       ^
--Recurse -Force}                                                      2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\Slack')   ^
+{Remove-Item                                                                     ^
+'C:\Users\%UserName%\AppData\Roaming\Slack\Cache\*'                            , ^
+'C:\Users\%UserName%\AppData\Roaming\Slack\Code Cache\*'                       , ^
+'C:\Users\%UserName%\AppData\Roaming\Slack\Crashpad\*'                         , ^
+'C:\Users\%UserName%\AppData\Roaming\Slack\GPUCache\*'                         , ^
+'C:\Users\%UserName%\AppData\Roaming\Slack\Service Worker\CacheStorage\*'      , ^
+'C:\Users\%UserName%\AppData\Roaming\Slack\Service Worker\ScriptCache\*'         ^
+-Recurse -Force}                                                        2>nul >nul
 
 cls
 
@@ -623,15 +631,15 @@ ECHO        Deleting Twitch Studio cache..
 ECHO        Удаление кэша Twitch Studio..
 ECHO        [32m[5m████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\slobs-client') ^
-{Remove-Item                                                                          ^
-'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\Cache\*'                       , ^
-'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\Code Cache\*'                  , ^
-'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\Crashpad\*'                    , ^
-'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\GPUCache\*'                    , ^
-'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\Service Worker\CacheStorage\*' , ^
-'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\Service Worker\ScriptCache\*'    ^
--Recurse -Force}                                                             2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\slobs-client')   ^
+{Remove-Item                                                                            ^
+'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\Cache\*'                         , ^
+'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\Code Cache\*'                    , ^
+'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\Crashpad\*'                      , ^
+'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\GPUCache\*'                      , ^
+'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\Service Worker\CacheStorage\*'   , ^
+'C:\Users\%UserName%\AppData\Roaming\Twitch Studio\*\Service Worker\ScriptCache\*'      ^
+-Recurse -Force}                                                               2>nul >nul
 
 cls
 
@@ -688,12 +696,11 @@ ECHO        Deleting Yandex.Music cache..
 ECHO        Удаление кэша Yandex.Music..
 ECHO        [32m[5m█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Packages\*Yandex.Music*') ^
-{Remove-Item                                                                                   ^
-'C:\Users\%UserName%\AppData\Local\Packages\*Yandex.Music*\LocalState\CachedCovers\*'        , ^
-'C:\Users\%UserName%\AppData\Local\Packages\*Yandex.Music*\LocalCache\MusicCache\*'            ^
--Recurse -Force}                                                                      2>nul >nul
-
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Packages\*Yandex.Music*')   ^
+{Remove-Item                                                                                     ^
+'C:\Users\%UserName%\AppData\Local\Packages\*Yandex.Music*\LocalState\CachedCovers\*'          , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*Yandex.Music*\LocalCache\MusicCache\*'              ^
+-Recurse -Force}                                                                        2>nul >nul
 
 cls
 
@@ -754,15 +761,15 @@ ECHO        Removing GitHub Desktop cache..
 ECHO        Удаление кэша GitHub Desktop..
 ECHO        [32m[5m███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop') ^
-{Remove-Item                                                                            ^
-'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Cache\Cache_Data\*'               , ^
-'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Code Cache\*'                     , ^
-'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\GPUCache\*'                       , ^
-'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Crashpad\*'                       , ^
-'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Service Worker\CacheStorage\*'    , ^
-'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Service Worker\ScriptCache\*'       ^
--Recurse -Force}                                                               2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop')   ^
+{Remove-Item                                                                              ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Cache\Cache_Data\*'                 , ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Code Cache\*'                       , ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\GPUCache\*'                         , ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Crashpad\*'                         , ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Service Worker\CacheStorage\*'      , ^
+'C:\Users\%UserName%\AppData\Roaming\GitHub Desktop\Service Worker\ScriptCache\*'         ^
+-Recurse -Force}                                                                 2>nul >nul
 
 cls
 
@@ -890,7 +897,7 @@ PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Origin')   
 'C:\Users\%UserName%\AppData\Local\Origin\Origin\QtWebEngine\Default\GPUCache\*'                    , ^
 'C:\Users\%UserName%\AppData\Local\Origin\Origin\QtWebEngine\Default\Service Worker\CacheStorage\*' , ^
 'C:\Users\%UserName%\AppData\Local\Origin\Origin\QtWebEngine\Default\Service Worker\ScriptCache\*'    ^
--Recurse -Force}                                                                             2>nul >nul 
+-Recurse -Force}                                                                             2>nul >nul
 PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\EADesktop')                      ^
 {Remove-Item                                                                                          ^
 'C:\Users\%UserName%\AppData\Local\EADesktop\cache\QtWebEngine\Default\Cache\*'                     , ^
@@ -971,15 +978,15 @@ ECHO        Deleting OpenVPN Connect..
 ECHO        Удаление кэша OpenVPN Connect..
 ECHO        [32m[5m████████████████████████████░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect') ^
-{Remove-Item                                                                             ^
-'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\Cache\*'                          , ^
-'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\Code Cache\*'                     , ^
-'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\Crashpad\*'                       , ^
-'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\GPUCache\*'                       , ^
-'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\Service Worker\CacheStorage\*'    , ^
-'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\Service Worker\ScriptCache\*'       ^
--Recurse -Force}                                                                2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect')   ^
+{Remove-Item                                                                               ^
+'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\Cache\*'                            , ^
+'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\Code Cache\*'                       , ^
+'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\Crashpad\*'                         , ^
+'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\GPUCache\*'                         , ^
+'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\Service Worker\CacheStorage\*'      , ^
+'C:\Users\%UserName%\AppData\Roaming\OpenVPN Connect\Service Worker\ScriptCache\*'         ^
+-Recurse -Force}                                                                  2>nul >nul
 
 cls
 
@@ -1010,8 +1017,11 @@ ECHO        Deleting CryptnetUrlCache cache..
 ECHO        Удаление кэша CryptnetUrlCache..
 ECHO        [32m[5m████████████████████████████░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content\*'  -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\LocalLow\Microsoft\CryptnetUrlCache\MetaData\*' -Recurse -Force" 2>nul >nul                          
+PowerShell -Command                                                            ^
+Remove-Item                                                                    ^
+'C:\Users\%UserName%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content\*'  , ^
+'C:\Users\%UserName%\AppData\LocalLow\Microsoft\CryptnetUrlCache\MetaData\*'   ^
+-Recurse -Force                                                       2>nul >nul
 
 cls
 
@@ -1021,9 +1031,12 @@ ECHO        Deleting Internet Explorer cache..
 ECHO        Удаление кэша Internet Explorer..
 ECHO        [32m[5m████████████████████████████░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 8                                                                     2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\cache\*'                         -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\WebCache.old*' -Recurse -Force" 2>nul >nul
+RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 8            2>nul >nul
+PowerShell -Command                                                   ^
+Remove-Item                                                           ^
+'C:\Users\%UserName%\AppData\Local\cache\*'                         , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\WebCache.old*'   ^
+-Recurse -Force                                              2>nul >nul
 
 cls
 
@@ -1033,15 +1046,28 @@ ECHO        Deleting Microsoft Edge cache..
 ECHO        Удаление кэша Microsoft Edge..
 ECHO        [32m[5m████████████████████████████░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\Crashpad\*'                      -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\Cache\Cache_Data\*'            -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\Code Cache\*'                  -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\File System\*'                 -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\GPUCache\*'                    -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\Service Worker\CacheStorage\*' -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\Service Worker\ScriptCache\*'  -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\GrShaderCache\*'                 -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\ShaderCache\*'                   -Recurse -Force" 2>nul >nul
+PowerShell -Command                                                                              ^
+Remove-Item                                                                                      ^
+'C:\Program Files*\Microsoft\EdgeUpdate\Download\*'                                            , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\Crashpad\*'                        , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\Cache\Cache_Data\*'              , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\Code Cache\*'                    , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\File System\*'                   , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\GPUCache\*'                      , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\Service Worker\CacheStorage\*'   , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\*\Service Worker\ScriptCache\*'    , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\GrShaderCache\*'                   , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Edge\User Data\ShaderCache\*'                     , ^
+'C:\Users\%UserName%\AppData\LocalLow\webviewdata\*\EBWebView\Crashpad\*'                      , ^
+'C:\Users\%UserName%\AppData\LocalLow\webviewdata\*\EBWebView\*\Cache\Cache_Data\*'            , ^
+'C:\Users\%UserName%\AppData\LocalLow\webviewdata\*\EBWebView\*\Code Cache\*'                  , ^
+'C:\Users\%UserName%\AppData\LocalLow\webviewdata\*\EBWebView\*\File System\*'                 , ^
+'C:\Users\%UserName%\AppData\LocalLow\webviewdata\*\EBWebView\*\GPUCache\*'                    , ^
+'C:\Users\%UserName%\AppData\LocalLow\webviewdata\*\EBWebView\*\Service Worker\CacheStorage\*' , ^
+'C:\Users\%UserName%\AppData\LocalLow\webviewdata\*\EBWebView\*\Service Worker\ScriptCache\*'  , ^
+'C:\Users\%UserName%\AppData\LocalLow\webviewdata\*\EBWebView\GrShaderCache\*'                 , ^
+'C:\Users\%UserName%\AppData\LocalLow\webviewdata\*\EBWebView\ShaderCache\*'                     ^
+-Recurse -Force                                                                         2>nul >nul
 
 cls
 
@@ -1204,10 +1230,7 @@ ECHO        Deleting Mozilla Firefox cache..
 ECHO        Удаление кэша Mozilla Firefox..
 ECHO        [32m[5m████████████████████████████░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Mozilla\Firefox') ^
-{Remove-Item                                                                           ^
-'C:\Users\%UserName%\AppData\Local\Mozilla\Firefox\Profiles\*\cache2\entries\*'        ^
--Recurse -Force}                                                              2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Mozilla\Firefox') {Remove-Item 'C:\Users\%UserName%\AppData\Local\Mozilla\Firefox\Profiles\*\cache2\entries\*' -Recurse -Force} 2>nul >nul
 
 cls
 
@@ -1346,42 +1369,45 @@ ECHO        Deleting a potential Cache..
 ECHO        Удаление потенциального кэша..
 ECHO        [32m[5m██████████████████████████████████████████░░░░░░
 ECHO.&ECHO.
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\*\Cache\*'                                                      -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\*\Code Cache\*'                                                 -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\*\Crashpad\*'                                                   -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\*\GPUCache\*'                                                   -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\*\Service Worker\CacheStorage\*'                                -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\*\Service Worker\ScriptCache\*'                                 -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\LocalLow\*\Cache\*'                                                   -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\LocalLow\*\Code Cache\*'                                              -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\LocalLow\*\Crashpad\*'                                                -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\LocalLow\*\GPUCache\*'                                                -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\LocalLow\*\Service Worker\CacheStorage\*'                             -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\LocalLow\*\Service Worker\ScriptCache\*'                              -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\*\Cache\*'                                                    -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\*\Code Cache\*'                                               -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\*\Crashpad\*'                                                 -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\*\GPUCache\*'                                                 -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\*\Service Worker\CacheStorage\*'                              -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Roaming\*\Service Worker\ScriptCache\*'                               -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\Cache\*'                          -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\Code Cache\*'                     -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\Crashpad\*'                       -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\GPUCache\*'                       -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\Service Worker\CacheStorage\*'    -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\Service Worker\ScriptCache\*'     -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\Cache\*'                       -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\Code Cache\*'                  -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\Crashpad\*'                    -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\GPUCache\*'                    -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\Service Worker\CacheStorage\*' -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\Service Worker\ScriptCache\*'  -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\Cache\*'                        -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\Code Cache\*'                   -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\Crashpad\*'                     -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\GPUCache\*'                     -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\Service Worker\CacheStorage\*'  -Recurse -Force" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\Service Worker\ScriptCache\*'   -Recurse -Force" 2>nul >nul
+PowerShell -Command                                                                                  ^
+Remove-Item                                                                                          ^
+'C:\Users\%UserName%\AppData\Local\*\Cache\*'                                                      , ^
+'C:\Users\%UserName%\AppData\Local\*\Code Cache\*'                                                 , ^
+'C:\Users\%UserName%\AppData\Local\*\Crashpad\*'                                                   , ^
+'C:\Users\%UserName%\AppData\Local\*\GPUCache\*'                                                   , ^
+'C:\Users\%UserName%\AppData\Local\*\Service Worker\CacheStorage\*'                                , ^
+'C:\Users\%UserName%\AppData\Local\*\Service Worker\ScriptCache\*'                                 , ^
+'C:\Users\%UserName%\AppData\LocalLow\*\Cache\*'                                                   , ^
+'C:\Users\%UserName%\AppData\LocalLow\*\Code Cache\*'                                              , ^
+'C:\Users\%UserName%\AppData\LocalLow\*\Crashpad\*'                                                , ^
+'C:\Users\%UserName%\AppData\LocalLow\*\GPUCache\*'                                                , ^
+'C:\Users\%UserName%\AppData\LocalLow\*\Service Worker\CacheStorage\*'                             , ^
+'C:\Users\%UserName%\AppData\LocalLow\*\Service Worker\ScriptCache\*'                              , ^
+'C:\Users\%UserName%\AppData\Roaming\*\Cache\*'                                                    , ^
+'C:\Users\%UserName%\AppData\Roaming\*\Code Cache\*'                                               , ^
+'C:\Users\%UserName%\AppData\Roaming\*\Crashpad\*'                                                 , ^
+'C:\Users\%UserName%\AppData\Roaming\*\GPUCache\*'                                                 , ^
+'C:\Users\%UserName%\AppData\Roaming\*\Service Worker\CacheStorage\*'                              , ^
+'C:\Users\%UserName%\AppData\Roaming\*\Service Worker\ScriptCache\*'                               , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\Cache\*'                          , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\Code Cache\*'                     , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\Crashpad\*'                       , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\GPUCache\*'                       , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\Service Worker\CacheStorage\*'    , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Local\*\Service Worker\ScriptCache\*'     , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\Cache\*'                       , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\Code Cache\*'                  , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\Crashpad\*'                    , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\GPUCache\*'                    , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\Service Worker\CacheStorage\*' , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\LocalLow\*\Service Worker\ScriptCache\*'  , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\Cache\*'                        , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\Code Cache\*'                   , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\Crashpad\*'                     , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\GPUCache\*'                     , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\Service Worker\CacheStorage\*'  , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*\LocalCache\Roaming\*\Service Worker\ScriptCache\*'     ^
+-Recurse -Force                                                                             2>nul >nul
 
 cls
 
@@ -1391,11 +1417,14 @@ ECHO        Clearing cache of fonts and icons..
 ECHO        Очистка кэша шрифтов и значков..
 ECHO        [32m[5m████████████████████████████████████████████░░░░
 ECHO.&ECHO.
-taskkill /F /IM Explorer.exe                                                                                                                                             2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\IconCache.db'                                                                       -Recurse -Force" 2>nul >nul
+TaskKill /F /IM Explorer.exe                                                                                                                                             2>nul >nul
+PowerShell -Command                                                                                                                                                               ^
+Remove-Item                                                                                                                                                                       ^
+'C:\Users\%UserName%\AppData\Local\IconCache.db'                                                                                                                                , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\Explorer\*.db'                                                                                                               ^
+-Recurse -Force                                                                                                                                                          2>nul >nul
 :: Deleting SageThumbs cahce | Удаление кэша SageThumbs
 PowerShell -Command "if (Test-Path 'C:\Users\%UserName%\AppData\Local\SageThumbs.db3') {Remove-Item 'C:\Users\%UserName%\AppData\Local\SageThumbs.db3' -Recurse -Force}" 2>nul >nul
-PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\Explorer\*.db'                                                    -Recurse -Force" 2>nul >nul
 REG DELETE "HKCU\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify"                                                                /F 2>nul >nul
 Start Explorer.exe                                                                                                                                                       2>nul >nul
 
