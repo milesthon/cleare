@@ -1421,7 +1421,9 @@ TaskKill /F /IM Explorer.exe                                                    
 PowerShell -Command                                                                                                                                                               ^
 Remove-Item                                                                                                                                                                       ^
 'C:\Users\%UserName%\AppData\Local\IconCache.db'                                                                                                                                , ^
-'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\Explorer\*.db'                                                                                                               ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\Explorer\*.db'                                                                                                             , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\Explorer\IconCacheToDelete\*'                                                                                              , ^
+'C:\Users\%UserName%\AppData\Local\Microsoft\Windows\Explorer\ThumbCacheToDelete\*'                                                                                               ^
 -Recurse -Force                                                                                                                                                          2>nul >nul
 :: Deleting SageThumbs cahce | Удаление кэша SageThumbs
 PowerShell -Command "if (Test-Path 'C:\Users\%UserName%\AppData\Local\SageThumbs.db3') {Remove-Item 'C:\Users\%UserName%\AppData\Local\SageThumbs.db3' -Recurse -Force}" 2>nul >nul

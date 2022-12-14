@@ -1707,7 +1707,9 @@ Remove-Item                                                                     
 'C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.dat'                                                                                       , ^
 'C:\Windows\System32\FNTCACHE.DAT'                                                                                                                            , ^
 'C:\Users\*\AppData\Local\IconCache.db'                                                                                                                       , ^
-'C:\Users\*\AppData\Local\Microsoft\Windows\Explorer\*.db'                                                                                                      ^
+'C:\Users\*\AppData\Local\Microsoft\Windows\Explorer\*.db'                                                                                                    , ^
+'C:\Users\*\AppData\Local\Microsoft\Windows\Explorer\IconCacheToDelete\*'                                                                                     , ^
+'C:\Users\*\AppData\Local\Microsoft\Windows\Explorer\ThumbCacheToDelete\*'                                                                                      ^
 -Recurse -Force                                                                                                                                        2>nul >nul
 :: Deleting SageThumbs cahce | Удаление кэша SageThumbs
 PowerShell -Command "if (Test-Path 'C:\Users\*\AppData\Local\SageThumbs.db3') {Remove-Item 'C:\Users\*\AppData\Local\SageThumbs.db3' -Recurse -Force}" 2>nul >nul
