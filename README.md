@@ -1,6 +1,7 @@
 # cleare
 ***
 #### [YouTube](https://YouTube.com/mmichaelKo) | [VK](https://VK.com/id180544766) | [Twitch](https://Twitch.tv/mmichaelKo) | [Instagram](https://Instagram.com/mmichaelKo) | [TikTok](https://TikTok.com/@mmichaelko)
+***
 ## Clear cache and junk files | Очистка кэша и ненужных файлов
 This batch script will remove the system cache and unnecessary files:  
 Данный batch скрипт удалит системный кэш и ненужные файлы:
@@ -99,5 +100,9 @@ It will also clear the cache of programs such as:
 - Comodo Browser
 - Pale Moon
 - SageThumbs
+
+<div align="center">
+<img alt="Image" src="https://github.com/mmichaelKo/cleare/blob/main/Image.png"/>
+
 ***
 by mmichaelKo
