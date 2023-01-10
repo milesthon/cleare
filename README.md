@@ -92,7 +92,9 @@ It will also clear the cache of programs such as:
 - - Chromium
 - Yandex Browser
 - Opera
-- Mozilla Firefox
+- Mozilla
+- - Firefox
+- - Thunderbird
 - Cent Browser
 - Atom
 - Vivaldi
