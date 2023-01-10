@@ -568,6 +568,7 @@ PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Microsoft\Teams')   
 {Remove-Item                                                                              ^
 'C:\Users\*\AppData\Local\Microsoft\Teams\Cache\*'                                      , ^
 'C:\Users\*\AppData\Local\Microsoft\Teams\tmp\*'                                        , ^
+'C:\Users\*\AppData\Roaming\Microsoft\Teams\logs.txt'                                   , ^
 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Cache\*'                                    , ^
 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Code Cache\*'                               , ^
 'C:\Users\*\AppData\Roaming\Microsoft\Teams\Crashpad\*'                                 , ^
@@ -1507,10 +1508,26 @@ ECHO        Deleting Mozilla Firefox cache..
 ECHO        Удаление кэша Mozilla Firefox..
 ECHO        [32m[5m████████████████████████████░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Mozilla\Firefox') ^
+PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Mozilla\Firefox')   ^
+{Remove-Item                                                                    ^
+'C:\Program Files*\Mozilla Maintenance Service\update\*                       , ^
+'C:\ProgramData\Mozilla*\updates\*\updates\*'                                 , ^
+'C:\Users\*\AppData\Local\Mozilla\Firefox\Profiles\*\cache2\entries\*'          ^
+-Recurse -Force}                                                       2>nul >nul
+
+cls
+
+COLOR F9
+ECHO.&ECHO.
+ECHO        Deleting Thunderbird cache..
+ECHO        Удаление кэша Thunderbird..
+ECHO        [32m[5m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Thunderbird')     ^
 {Remove-Item                                                                  ^
+'C:\Program Files*\Mozilla Maintenance Service\update\*                     , ^
 'C:\ProgramData\Mozilla*\updates\*\updates\*'                               , ^
-'C:\Users\*\AppData\Local\Mozilla\Firefox\Profiles\*\cache2\entries\*'        ^
+'C:\Users\*\AppData\Local\Thunderbird\Profiles\*\cache2\entries\*'            ^
 -Recurse -Force}                                                     2>nul >nul
 
 cls

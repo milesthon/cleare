@@ -361,6 +361,7 @@ PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Microsoft\T
 {Remove-Item                                                                                       ^
 'C:\Users\%UserName%\AppData\Local\Microsoft\Teams\Cache\*'                                      , ^
 'C:\Users\%UserName%\AppData\Local\Microsoft\Teams\tmp\*'                                        , ^
+'C:\Users\%UserName%\AppData\Roaming\Microsoft\Teams\logs.txt'                                   , ^
 'C:\Users\%UserName%\AppData\Roaming\Microsoft\Teams\Cache\*'                                    , ^
 'C:\Users\%UserName%\AppData\Roaming\Microsoft\Teams\Code Cache\*'                               , ^
 'C:\Users\%UserName%\AppData\Roaming\Microsoft\Teams\Crashpad\*'                                 , ^
@@ -1231,6 +1232,16 @@ ECHO        Удаление кэша Mozilla Firefox..
 ECHO        [32m[5m████████████████████████████░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
 PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Mozilla\Firefox') {Remove-Item 'C:\Users\%UserName%\AppData\Local\Mozilla\Firefox\Profiles\*\cache2\entries\*' -Recurse -Force} 2>nul >nul
+
+cls
+
+COLOR F9
+ECHO.&ECHO.
+ECHO        Deleting Thunderbird cache..
+ECHO        Удаление кэша Thunderbird..
+ECHO        [32m[5m████████████████████████████░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Thunderbird') {Remove-Item 'C:\Users\%UserName%\AppData\Local\Thunderbird\Profiles\*\cache2\entries\*' -Recurse -Force} 2>nul >nul
 
 cls
 
