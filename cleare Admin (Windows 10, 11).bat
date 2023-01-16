@@ -150,7 +150,7 @@ ECHO        Removing Windows update files..
 ECHO        Удаление файлов обновления Windows..
 ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-net stop cryptsvc                                                                                 2>nul >nul
+net stop cryptsvc /yes                                                                            2>nul >nul
 PowerShell -Command                                                                                        ^
 Remove-Item                                                                                                ^
 'C:\$GetCurrent'                                                                                         , ^
@@ -249,7 +249,7 @@ ECHO        Deleting SRUDB.dat..
 ECHO        Удаление SRUDB.dat..
 ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-net stop DPS                                                                  2>nul >nul
+net stop DPS /yes                                                             2>nul >nul
 PowerShell -command "Remove-Item 'C:\Windows\System32\sru\*' -Recurse -Force" 2>nul >nul
 net start DPS                                                                 2>nul >nul
 
@@ -1718,7 +1718,7 @@ ECHO        Очистка кэша шрифтов и значков..
 ECHO        [32m[5m████████████████████████████████████████████░░░░
 ECHO.&ECHO.
 TaskKill /F /IM Explorer.exe                                                                                                                           2>nul >nul
-NET Stop "FontCache"                                                                                                                                   2>nul >nul
+net Stop "FontCache" /yes                                                                                                                              2>nul >nul
 PowerShell -Command                                                                                                                                             ^
 Remove-Item                                                                                                                                                     ^
 'C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.dat'                                                                                       , ^
@@ -1731,7 +1731,7 @@ Remove-Item                                                                     
 :: Deleting SageThumbs cahce | Удаление кэша SageThumbs
 PowerShell -Command "if (Test-Path 'C:\Users\*\AppData\Local\SageThumbs.db3') {Remove-Item 'C:\Users\*\AppData\Local\SageThumbs.db3' -Recurse -Force}" 2>nul >nul
 REG DELETE "HKCU\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify"                                              /F 2>nul >nul
-NET Start "FontCache"                                                                                                                                  2>nul >nul
+net Start "FontCache"                                                                                                                                  2>nul >nul
 Start Explorer.exe                                                                                                                                     2>nul >nul
 
 cls
