@@ -822,17 +822,23 @@ ECHO        Deleting Minecraft cache..
 ECHO        Удаление кэша Minecraft..
 ECHO        [32m[5m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\.minecraft')              ^
-{Remove-Item                                                                                     ^
-'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\Cache\*'                             , ^
-'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\Code Cache\*'                        , ^
-'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\Crashpad\*'                          , ^
-'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\GPUCache\*'                          , ^
-'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\Service Worker\CacheStorage\*'       , ^
-'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\Service Worker\ScriptCache\*'        , ^
-'C:\Users\%UserName%\AppData\Local\Packages\*Minecraft*\LocalCache\minecraftpe\CatalogCache\*' , ^
-'C:\Users\%UserName%\AppData\Local\Packages\*Minecraft*\LocalCache\minecraftpe\ContentCache\*'   ^
--Recurse -Force}                                                                        2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\.minecraft')                    ^
+{Remove-Item                                                                                           ^
+'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\Cache\*'                                   , ^
+'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\Code Cache\*'                              , ^
+'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\Crashpad\*'                                , ^
+'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\GPUCache\*'                                , ^
+'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\Service Worker\CacheStorage\*'             , ^
+'C:\Users\%UserName%\AppData\Roaming\.minecraft\webcache*\Service Worker\ScriptCache\*'              , ^
+'C:\Users\%UserName%\AppData\Roaming\minecraftedu\minecraft\webcache*\Cache\*'                       , ^
+'C:\Users\%UserName%\AppData\Roaming\minecraftedu\minecraft\webcache*\Code Cache\*'                  , ^
+'C:\Users\%UserName%\AppData\Roaming\minecraftedu\minecraft\webcache*\Crashpad\*'                    , ^
+'C:\Users\%UserName%\AppData\Roaming\minecraftedu\minecraft\webcache*\GPUCache\*'                    , ^
+'C:\Users\%UserName%\AppData\Roaming\minecraftedu\minecraft\webcache*\Service Worker\CacheStorage\*' , ^
+'C:\Users\%UserName%\AppData\Roaming\minecraftedu\minecraft\webcache*\Service Worker\ScriptCache\*'  , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*Minecraft*\LocalCache\minecraftpe\CatalogCache\*'       , ^
+'C:\Users\%UserName%\AppData\Local\Packages\*Minecraft*\LocalCache\minecraftpe\ContentCache\*'         ^
+-Recurse -Force}                                                                              2>nul >nul
 
 cls
 
