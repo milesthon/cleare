@@ -108,4 +108,4 @@ It will also clear the cache of programs such as:
 <img alt="Image" src="https://github.com/mmichaelKo/cleare/blob/main/Image.png"/>
 
 ***
-by mmichaelKo
+by MilesthoN
