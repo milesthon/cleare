@@ -105,7 +105,7 @@ It will also clear the cache of programs such as:
 - SageThumbs
 
 <div align="center">
-<img alt="Image" src="https://github.com/mmichaelKo/cleare/blob/main/Image.png"/>
+<img alt="Image" src="https://github.com/MilesthoN/cleare/blob/main/Image.png"/>
 
 ***
 by MilesthoN
