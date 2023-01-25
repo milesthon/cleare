@@ -1,11 +1,11 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-::                   by mmichaelKo                     ::
+::                   by  MilesthoN                     ::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 @ECHO OFF
 CHCP 65001>NUL
 COLOR F9
-TITLE cleare (Windows 10, 11) by mmichaelKo
+TITLE cleare (Windows 10, 11) by MilesthoN
 MODE 62,8
 ECHO.&ECHO.&ECHO.&ECHO                Run as Administrator..&ECHO                Запуск от имени Администратора..&ECHO.&ECHO.
 net sess>NUL 2>&1||(powershell try{saps '%0'-Verb RunAs}catch{}&exit)

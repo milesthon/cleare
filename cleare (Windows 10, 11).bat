@@ -1,11 +1,11 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-::                   by mmichaelKo                     ::
+::                   by  MilesthoN                     ::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 @ECHO OFF
 CHCP 65001>NUL
 COLOR F9
-TITLE cleare (Windows 10, 11) by mmichaelKo
+TITLE cleare (Windows 10, 11) by MilesthoN
 
 MODE 62,26
 COLOR F9
