@@ -168,6 +168,16 @@ cls
 
 COLOR F9
 ECHO.&ECHO.
+ECHO        Deleting DirectX Shrader cache..
+ECHO        Удаление кэша DirectX..
+ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+PowerShell -command "Remove-Item 'C:\Users\%UserName%\AppData\Local\D3DSCache\*' -Recurse -Force" 2>nul >nul
+
+cls
+
+COLOR F9
+ECHO.&ECHO.
 ECHO        Deleting Microsoft Store cache..
 ECHO        Удаление кэша Microsoft Store..
 ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -255,7 +265,6 @@ ECHO        [32m[5m████░░░░░░░░░░░░░░░�
 ECHO.&ECHO.
 PowerShell -Command if (Test-Path 'C:\ProgramData\NVIDIA')                                                                ^
 {Remove-Item                                                                                                              ^
-'C:\Users\%UserName%\AppData\Local\D3DSCache\*'                                                                         , ^
 'C:\Users\%UserName%\AppData\Local\NVIDIA\GLCache\*'                                                                    , ^
 'C:\Users\%UserName%\AppData\Local\NVIDIA Corporation\NV_Cache\*'                                                       , ^
 'C:\Users\%UserName%\AppData\Local\NVIDIA Corporation\NVIDIA GeForce Experience\CefCache\Cache\*'                       , ^
@@ -1446,16 +1455,6 @@ Remove-Item                                                                     
 PowerShell -Command "if (Test-Path 'C:\Users\%UserName%\AppData\Local\SageThumbs.db3') {Remove-Item 'C:\Users\%UserName%\AppData\Local\SageThumbs.db3' -Recurse -Force}" 2>nul >nul
 REG DELETE "HKCU\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify"                                                                /F 2>nul >nul
 Start Explorer.exe                                                                                                                                                       2>nul >nul
-
-cls
-
-COLOR F9
-ECHO.&ECHO.
-ECHO        Clearing RAM..
-ECHO        Очистка оперативной памяти..
-ECHO        [32m[5m███████████████████████████████████████████████░
-ECHO.&ECHO.
-rundll32.exe 2>nul >nul
 
 cls
 

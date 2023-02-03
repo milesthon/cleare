@@ -354,6 +354,23 @@ cls
 
 COLOR F9
 ECHO.&ECHO.
+ECHO        Deleting DirectX Shrader cache..
+ECHO        Удаление кэша DirectX..
+ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+PowerShell -Command                                                     ^
+Remove-Item                                                             ^
+'C:\Windows\ServiceProfiles\LocalService\AppData\Local\D3DSCache\*'   , ^
+'C:\Windows\ServiceProfiles\NetworkService\AppData\Local\D3DSCache\*' , ^
+'C:\Windows\System32\config\systemprofile\AppData\Local\D3DSCache\*'  , ^
+'C:\Windows\SysWOW64\config\systemprofile\AppData\Local\D3DSCache\*'  , ^
+'C:\Users\*\AppData\Local\D3DSCache\*'                                  ^
+-Recurse -Force}                                               2>nul >nul
+
+cls
+
+COLOR F9
+ECHO.&ECHO.
 ECHO        Deleting Microsoft Store cache..
 ECHO        Удаление кэша Microsoft Store..
 ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -452,11 +469,6 @@ PowerShell -Command if (Test-Path 'C:\ProgramData\NVIDIA')                      
 'C:\ProgramData\NVIDIA\*'                                                                                      , ^
 'C:\ProgramData\NVIDIA Corporation\GeForce Experience\Logs\*.log'                                              , ^
 'C:\ProgramData\NVIDIA Corporation\NV_Cache\*'                                                                 , ^
-'C:\Windows\ServiceProfiles\LocalService\AppData\Local\D3DSCache\*'                                            , ^
-'C:\Windows\ServiceProfiles\NetworkService\AppData\Local\D3DSCache\*'                                          , ^
-'C:\Windows\System32\config\systemprofile\AppData\Local\D3DSCache\*'                                           , ^
-'C:\Windows\SysWOW64\config\systemprofile\AppData\Local\D3DSCache\*'                                           , ^
-'C:\Users\*\AppData\Local\D3DSCache\*'                                                                         , ^
 'C:\Users\*\AppData\Local\NVIDIA\GLCache\*'                                                                    , ^
 'C:\Users\*\AppData\Local\NVIDIA Corporation\NV_Cache\*'                                                       , ^
 'C:\Users\*\AppData\Local\NVIDIA Corporation\NVIDIA GeForce Experience\CefCache\Cache\*'                       , ^
@@ -1749,16 +1761,6 @@ ECHO        Отключение гибернации..
 ECHO        [32m[5m█████████████████████████████████████████████░░░
 ECHO.&ECHO.
 powercfg.exe /hibernate off 2>nul >nul
-
-cls
-
-COLOR F9
-ECHO.&ECHO.
-ECHO        Clearing RAM..
-ECHO        Очистка оперативной памяти..
-ECHO        [32m[5m███████████████████████████████████████████████░
-ECHO.&ECHO.
-rundll32.exe 2>nul >nul
 
 cls
 
