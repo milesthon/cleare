@@ -130,6 +130,7 @@ ECHO        [32m[5m██░░░░░░░░░░░░░░░░░�
 ECHO.&ECHO.
 PowerShell -Command                                                ^
 Remove-Item                                                        ^
+'C:\ProgramData\Temp\*'                                          , ^
 'C:\Windows\assembly\*\Temp\*'                                   , ^
 'C:\Windows\assembly\Temp\*'                                     , ^
 'C:\Windows\assembly\tmp\*'                                      , ^
