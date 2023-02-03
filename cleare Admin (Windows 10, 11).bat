@@ -161,6 +161,7 @@ Remove-Item                                                                     
 'C:\$WinREAgent'                                                                                         , ^
 'C:\ESD'                                                                                                 , ^
 'C:\Windows10Upgrade'                                                                                    , ^
+'C:\Windows\Installer\$PatchCache$\Managed\*'                                                            , ^
 'C:\Windows\System32\catroot2\*'                                                                         , ^
 'C:\Windows\Logs\WindowsUpdate\*.log'                                                                    , ^
 'C:\Windows\SoftwareDistribution\DataStore\Logs\*'                                                       , ^
