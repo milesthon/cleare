@@ -29,11 +29,10 @@ This batch script will remove the system cache and unnecessary files (Does not a
 - DNS cache
 - ARP cache
 - RDP cache
+- DirectX Shrader
 - Windows 11 Widgets
 - Disable hibernation  
   Отключить гибернацию
-- RAM  
-  Оперативная память
 
 It will also clear the cache of programs such as:  
 А так же очистит кэш программ таких как:
