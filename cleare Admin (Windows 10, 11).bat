@@ -1072,24 +1072,25 @@ ECHO        Deleting Steam cache..
 ECHO        Удаление кэша Steam..
 ECHO        [32m[5m████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Steam')        ^
-{Remove-Item                                                               ^
-'C:\Program Files*\Steam\appcache\httpcache\*'                           , ^
-'C:\Program Files*\Steam\appcache\librarycache\*.jpg'                    , ^
-'C:\Program Files*\Steam\appcache\librarycache\*.png'                    , ^
-'C:\Program Files*\Steam\depotcache\*'                                   , ^
-'C:\Program Files*\Steam\steam\cached\*'                                 , ^
-'C:\Program Files*\Steam\SteamApps\downloading\*'                        , ^
-'C:\Program Files*\Steam\SteamApps\temp\*'                               , ^
-'C:\Program Files*\Steam\SteamApps\workshop\temp\*'                      , ^
-'C:\Program Files*\Steam\SteamApps\workshop\downloads\*'                 , ^
-'C:\Users\*\AppData\Local\Steam\htmlcache\Cache\*'                       , ^
-'C:\Users\*\AppData\Local\Steam\htmlcache\Code Cache\*'                  , ^
-'C:\Users\*\AppData\Local\Steam\htmlcache\Crashpad\*'                    , ^
-'C:\Users\*\AppData\Local\Steam\htmlcache\GPUCache\*'                    , ^
-'C:\Users\*\AppData\Local\Steam\htmlcache\Service Worker\CacheStorage\*' , ^
-'C:\Users\*\AppData\Local\Steam\htmlcache\Service Worker\ScriptCache\*'    ^
--Recurse -Force}                                                  2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Steam')            ^
+{Remove-Item                                                                   ^
+'C:\Program Files*\Steam\appcache\httpcache\*'                               , ^
+'C:\Program Files*\Steam\appcache\librarycache\*.jpg'                        , ^
+'C:\Program Files*\Steam\appcache\librarycache\*.png'                        , ^
+'C:\Program Files*\Steam\depotcache\*'                                       , ^
+'C:\Program Files*\Steam\steam\cached\*'                                     , ^
+'C:\Program Files*\Steam\steamapps\common\Steamworks Shared\_CommonRedist\*' , ^
+'C:\Program Files*\Steam\SteamApps\downloading\*'                            , ^
+'C:\Program Files*\Steam\SteamApps\temp\*'                                   , ^
+'C:\Program Files*\Steam\SteamApps\workshop\temp\*'                          , ^
+'C:\Program Files*\Steam\SteamApps\workshop\downloads\*'                     , ^
+'C:\Users\*\AppData\Local\Steam\htmlcache\Cache\*'                           , ^
+'C:\Users\*\AppData\Local\Steam\htmlcache\Code Cache\*'                      , ^
+'C:\Users\*\AppData\Local\Steam\htmlcache\Crashpad\*'                        , ^
+'C:\Users\*\AppData\Local\Steam\htmlcache\GPUCache\*'                        , ^
+'C:\Users\*\AppData\Local\Steam\htmlcache\Service Worker\CacheStorage\*'     , ^
+'C:\Users\*\AppData\Local\Steam\htmlcache\Service Worker\ScriptCache\*'        ^
+-Recurse -Force}                                                      2>nul >nul
 
 cls
 
