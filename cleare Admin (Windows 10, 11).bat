@@ -298,7 +298,6 @@ ECHO        Deleting Windows history..
 ECHO        Удаление истории Windows..
 ECHO        [32m[5m██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-ECHO.
 PowerShell -command "Remove-Item 'C:\Users\*\AppData\Local\Microsoft\Windows\History\*' -Recurse -Force" 2>nul >nul
 
 cls
