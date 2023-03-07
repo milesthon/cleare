@@ -626,15 +626,33 @@ ECHO.&ECHO.
 PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Roaming\Telegram Desktop')                                         ^
 {Remove-Item                                                                                                             ^
 'C:\Users\*\AppData\Roaming\Telegram Desktop\tdata\emoji\*'                                                            , ^
-'C:\Users\*\AppData\Roaming\Telegram Desktop\tdata\user_data*\cache\0\*'                                               , ^
-'C:\Users\*\AppData\Roaming\Telegram Desktop\tdata\user_data*\media_cache\0\*'                                           ^
+'C:\Users\*\AppData\Roaming\Telegram Desktop\tdata\user_data*\cache\*\*'                                               , ^
+'C:\Users\*\AppData\Roaming\Telegram Desktop\tdata\user_data*\media_cache\*\*'                                           ^
 -Recurse -Force}                                                                                                2>nul >nul
 PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Packages\Telegram*')                                         ^
 {Remove-Item                                                                                                             ^
 'C:\Users\*\AppData\Local\Packages\Telegram*\LocalCache\Roaming\Telegram Desktop UWP\tdata\emoji\*'                    , ^
-'C:\Users\*\AppData\Local\Packages\Telegram*\LocalCache\Roaming\Telegram Desktop UWP\tdata\user_data*\cache\0\*'       , ^
-'C:\Users\*\AppData\Local\Packages\Telegram*\LocalCache\Roaming\Telegram Desktop UWP\tdata\user_data*\media_cache\0\*'   ^
+'C:\Users\*\AppData\Local\Packages\Telegram*\LocalCache\Roaming\Telegram Desktop UWP\tdata\user_data*\cache\*\*'       , ^
+'C:\Users\*\AppData\Local\Packages\Telegram*\LocalCache\Roaming\Telegram Desktop UWP\tdata\user_data*\media_cache\*\*'   ^
 -Recurse -Force}                                                                                                2>nul >nul
+
+cls
+
+COLOR F9
+ECHO.&ECHO.
+ECHO        Deleting Discord cache..
+ECHO        Удаление кэша Discord..
+ECHO        [32m[5m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Roaming\Discord')   ^
+{Remove-Item                                                              ^
+'C:\Users\*\AppData\Roaming\Discord\Cache\*'                            , ^
+'C:\Users\*\AppData\Roaming\Discord\Code Cache\*'                       , ^
+'C:\Users\*\AppData\Roaming\Discord\Crashpad\*'                         , ^
+'C:\Users\*\AppData\Roaming\Discord\GPUCache\*'                         , ^
+'C:\Users\*\AppData\Roaming\Discord\Service Worker\CacheStorage\*'      , ^
+'C:\Users\*\AppData\Roaming\Discord\Service Worker\ScriptCache\*'         ^
+-Recurse -Force}                                                 2>nul >nul
 
 cls
 
@@ -662,24 +680,6 @@ PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Packages\*VKMessenge
 'C:\Users\*\AppData\Local\Packages\*VKMessenger*\LocalCache\Roaming\VK\Service Worker\CacheStorage\*' , ^
 'C:\Users\*\AppData\Local\Packages\*VKMessenger*\LocalCache\Roaming\VK\Service Worker\ScriptCache\*'    ^
 -Recurse -Force}                                                                               2>nul >nul
-
-cls
-
-COLOR F9
-ECHO.&ECHO.
-ECHO        Deleting Discord cache..
-ECHO        Удаление кэша Discord..
-ECHO        [32m[5m███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Roaming\Discord')   ^
-{Remove-Item                                                              ^
-'C:\Users\*\AppData\Roaming\Discord\Cache\*'                            , ^
-'C:\Users\*\AppData\Roaming\Discord\Code Cache\*'                       , ^
-'C:\Users\*\AppData\Roaming\Discord\Crashpad\*'                         , ^
-'C:\Users\*\AppData\Roaming\Discord\GPUCache\*'                         , ^
-'C:\Users\*\AppData\Roaming\Discord\Service Worker\CacheStorage\*'      , ^
-'C:\Users\*\AppData\Roaming\Discord\Service Worker\ScriptCache\*'         ^
--Recurse -Force}                                                 2>nul >nul
 
 cls
 
