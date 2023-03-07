@@ -50,8 +50,8 @@ It will also clear the cache of programs such as:
 - Microsoft Teams
 - Zoom
 - Telegram Desktop
-- VK Messenger
 - Discord
+- VK Messenger
 - WhatsApp Desktop
 - Viber Desktop
 - ICQ Desktop
