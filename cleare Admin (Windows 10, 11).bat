@@ -1079,7 +1079,7 @@ PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Steam')            ^
 'C:\Program Files*\Steam\appcache\librarycache\*.png'                        , ^
 'C:\Program Files*\Steam\depotcache\*'                                       , ^
 'C:\Program Files*\Steam\steam\cached\*'                                     , ^
-'C:\Program Files*\Steam\steamapps\common\Steamworks Shared\_CommonRedist\*' , ^
+::'C:\Program Files*\Steam\steamapps\common\Steamworks Shared\_CommonRedist\*' , ^
 'C:\Program Files*\Steam\SteamApps\downloading\*'                            , ^
 'C:\Program Files*\Steam\SteamApps\temp\*'                                   , ^
 'C:\Program Files*\Steam\SteamApps\workshop\temp\*'                          , ^
