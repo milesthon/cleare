@@ -1748,6 +1748,8 @@ Remove-Item                                                                     
 'C:\Users\*\AppData\Local\Microsoft\Windows\Explorer\IconCacheToDelete\*'                                                                                     , ^
 'C:\Users\*\AppData\Local\Microsoft\Windows\Explorer\ThumbCacheToDelete\*'                                                                                      ^
 -Recurse -Force                                                                                                                                        2>nul >nul
+ie4uinit.exe -ClearIconCache                                                                                                                           2>nul >nul
+ie4uinit.exe -show                                                                                                                                     2>nul >nul
 :: Deleting SageThumbs cahce | Удаление кэша SageThumbs
 PowerShell -Command "if (Test-Path 'C:\Users\*\AppData\Local\SageThumbs.db3') {Remove-Item 'C:\Users\*\AppData\Local\SageThumbs.db3' -Recurse -Force}" 2>nul >nul
 REG DELETE "HKCU\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify"                                              /F 2>nul >nul
@@ -1762,7 +1764,9 @@ ECHO        Disabling hibernation..
 ECHO        Отключение гибернации..
 ECHO        [32m[5m█████████████████████████████████████████████░░░
 ECHO.&ECHO.
-powercfg.exe /hibernate off 2>nul >nul
+powercfg /h off           2>nul >nul
+::powercfg /h /type reduced 2>nul >nul
+
 
 cls
 
