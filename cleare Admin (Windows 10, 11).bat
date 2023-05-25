@@ -1737,6 +1737,7 @@ ECHO        Clearing cache of fonts and icons..
 ECHO        Очистка кэша шрифтов и значков..
 ECHO        [32m[5m████████████████████████████████████████████░░░░
 ECHO.&ECHO.
+PowerShell @^(^(New-Object -com shell.application^).Windows^(^)^).Document.Folder.Self.Path >> "%temp%\paths.txt"
 TaskKill /F /IM Explorer.exe                                                                                                                           2>nul >nul
 net Stop "FontCache" /yes                                                                                                                              2>nul >nul
 PowerShell -Command                                                                                                                                             ^
@@ -1748,13 +1749,18 @@ Remove-Item                                                                     
 'C:\Users\*\AppData\Local\Microsoft\Windows\Explorer\IconCacheToDelete\*'                                                                                     , ^
 'C:\Users\*\AppData\Local\Microsoft\Windows\Explorer\ThumbCacheToDelete\*'                                                                                      ^
 -Recurse -Force                                                                                                                                        2>nul >nul
-ie4uinit.exe -ClearIconCache                                                                                                                           2>nul >nul
 ie4uinit.exe -show                                                                                                                                     2>nul >nul
 :: Deleting SageThumbs cahce | Удаление кэша SageThumbs
 PowerShell -Command "if (Test-Path 'C:\Users\*\AppData\Local\SageThumbs.db3') {Remove-Item 'C:\Users\*\AppData\Local\SageThumbs.db3' -Recurse -Force}" 2>nul >nul
 REG DELETE "HKCU\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify"                                              /F 2>nul >nul
 net Start "FontCache"                                                                                                                                  2>nul >nul
 Start Explorer.exe                                                                                                                                     2>nul >nul
+FOR /F "tokens=*" %%f IN (%temp%\paths.txt) DO (
+set "var=%%f"
+set "firstletters=!var:~0,2!"
+IF "!firstletters!" == "::" ( start /min shell:%%~f ) ELSE ( start /min "" "%%~f" )
+)                                                                                                                                                      2>nul >nul
+DEL "%temp%\paths.txt"                                                                                                                                 2>nul >nul
 
 cls
 
