@@ -1,3 +1,5 @@
+cleareVersion 20122023 2>nul
+
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::                   by  MilesthoN                     ::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -7,7 +9,6 @@ CHCP 65001>NUL
 COLOR F9
 TITLE cleare (Windows 10, 11) by MilesthoN
 MODE 62,8
-cleareVersion 20122023 2>nul
 
 findstr /x /c:"cleareVersion 20122023 2>nul" "%~0" > "%temp%\cleareVersion.txt"
 set /p cleareVersion=<"%temp%\cleareVersion.txt"
