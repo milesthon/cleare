@@ -6,7 +6,6 @@
 CHCP 65001>NUL
 COLOR F9
 TITLE cleare (Windows 10, 11) by MilesthoN
-MODE 62,8
 
 COLOR F9
 ECHO.&ECHO.
@@ -22,10 +21,9 @@ cls
 COLOR F9
 ECHO.&ECHO.
 ECHO        Update..
-ECHO        Обновление..
+curl -# --ssl-no-revoke --insecure -L https://codeload.github.com/milesthon/cleare/zip/refs/heads/main  -o "%temp%\cleare-main.zip"
 ECHO        [32m[5m░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-curl -# --ssl-no-revoke --insecure -L https://codeload.github.com/milesthon/cleare/zip/refs/heads/main  -o "%temp%\cleare-main.zip"
 powershell -command "Expand-Archive -Path "%temp%\cleare-main.zip" -DestinationPath "%temp%\cleare-main" -Force"         2>nul >nul
 copy "%temp%\cleare-main\cleare-main\*" "%~dp0"                                                                          2>nul >nul
 start "" "%~f0"&exit
