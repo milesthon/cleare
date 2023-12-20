@@ -1,5 +1,3 @@
-cleareVersion 20122023 2>nul
-
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::                   by  MilesthoN                     ::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -10,15 +8,21 @@ COLOR F9
 TITLE cleare (Windows 10, 11) by MilesthoN
 MODE 62,8
 
-findstr /x /c:"cleareVersion 20122023 2>nul" "%~0" > "%temp%\cleareVersion.txt"
-set /p cleareVersion=<"%temp%\cleareVersion.txt"
-if "%cleareVersion%"=="cleareVersion 20122023 2>nul" (
-    goto noupdate
-) else (
 COLOR F9
 ECHO.&ECHO.
 ECHO        Check update..
 ECHO        Проверка обновлений..
+curl -# --ssl-no-revoke --insecure -L https://github.com/milesthon/cleare/blob/main/cleare%20Admin%20(Windows%2010%2C%2011).bat  -o "%temp%\cleareVersionWeb.txt"
+ECHO.&ECHO.
+findstr /c:"cleareVersion 20122023" "%temp%\cleareVersion.txt" > nul
+if %errorlevel%==0 (
+goto noupdate
+) else (
+cls
+COLOR F9
+ECHO.&ECHO.
+ECHO        Update..
+ECHO        Обновление..
 ECHO        [32m[5m░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
 curl -# --ssl-no-revoke --insecure -L https://codeload.github.com/milesthon/cleare/zip/refs/heads/main  -o "%temp%\cleare-main.zip"
