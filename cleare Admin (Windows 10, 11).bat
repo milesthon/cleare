@@ -7,6 +7,28 @@ CHCP 65001>NUL
 COLOR F9
 TITLE cleare (Windows 10, 11) by MilesthoN
 MODE 62,8
+
+cleareVersion 20122023 2>nul
+
+
+findstr /c:"cleareVersion" "%~0" > "%temp%\cleareVersion.txt"                                                             2>nul >nul
+set /p cleareVersion=<"%temp%\cleareVersion.txt"
+if "%cleareVersion%"=="cleareVersion 20122023 2>nul" (
+    goto noupdate
+) else (
+COLOR F9
+ECHO.&ECHO.
+ECHO        Check update..
+ECHO        Проверка обновлений..
+ECHO        [32m[5m░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+curl -# --ssl-no-revoke --insecure -L https://codeload.github.com/milesthon/cleare/zip/refs/heads/main  -o "%temp%\cleare-main.zip"
+powershell -command "Expand-Archive -Path "%temp%\cleare-main.zip" -DestinationPath "%temp%\cleare-main" -Force"         2>nul >nul
+copy "%temp%\cleare-main\cleare-main\*" "%~dp0"                                                                          2>nul >nul
+start "" "%~f0"&exit
+)
+
+:noupdate
 ECHO.&ECHO.&ECHO.&ECHO                Run as Administrator..&ECHO                Запуск от имени Администратора..&ECHO.&ECHO.
 net sess>NUL 2>&1||(powershell try{saps '%0'-Verb RunAs}catch{}&exit)
 
@@ -75,6 +97,7 @@ exit/b
  )
 
 :clean
+pause
 cls
 
 MODE 62,8
