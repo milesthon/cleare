@@ -95,9 +95,8 @@ exit/b
  )
 
 :clean
-pause
-cls
 
+cls
 MODE 62,8
 
 COLOR F9
