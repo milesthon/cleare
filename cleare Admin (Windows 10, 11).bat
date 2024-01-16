@@ -11,7 +11,7 @@ COLOR F9
 ECHO.&ECHO.
 ECHO        Check update..
 ECHO        Проверка обновлений..
-curl -# --ssl-no-revoke --insecure -L https://github.com/milesthon/cleare/blob/main/cleare%20Admin%20(Windows%2010%2C%2011).bat  -o "%temp%\CheckcleareVersion.txt"
+curl -# --ssl-no-revoke --insecure -L https://github.com/milesthon/cleare/raw/main/cleare%%20Admin%%20(Windows%%2010%%2C%%2011).bat -o "%temp%\CheckcleareVersion.txt"
 ECHO.&ECHO.
 findstr /c:"CheckcleareVersion 16012024" "%temp%\CheckcleareVersion.txt" > nul
 if %errorlevel%==0 (
