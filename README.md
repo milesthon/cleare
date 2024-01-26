@@ -65,6 +65,7 @@ It will also clear the cache of programs such as:
 - Spotify
 - Yandex.Music
 - Clipchamp
+- PowerToys
 - Screen Clip
 - Python (pip)
 - Microsoft Visual Studio
