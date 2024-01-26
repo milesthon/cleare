@@ -321,20 +321,31 @@ ECHO        Deleting Adobe cache..
 ECHO        Удаление кэша Adobe..
 ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\Adobe')                 ^
-{Remove-Item                                                                                   ^
-'C:\Users\%UserName%\AppData\LocalLow\Adobe\Common\Media Cache\*'                            , ^
-'C:\Users\%UserName%\AppData\LocalLow\Adobe\Common\Media Cache Files\*'                      , ^
-'C:\Users\%UserName%\AppData\LocalLow\Adobe\Common\Peak Files\*'                             , ^
-'C:\Users\%UserName%\AppData\Roaming\Adobe\Common\Media Cache\*'                             , ^
-'C:\Users\%UserName%\AppData\Roaming\Adobe\Common\Media Cache Files\*'                       , ^
-'C:\Users\%UserName%\AppData\Roaming\Adobe\Common\Peak Files\*'                              , ^
-'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\Cache\*'                       , ^
-'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\Code Cache\*'                  , ^
-'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\Crashpad\*'                    , ^
-'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\GPUCache\*'                    , ^
-'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\Service Worker\CacheStorage\*' , ^
-'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\Service Worker\ScriptCache\*'    ^
+PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Roaming\Adobe')                                              ^
+{Remove-Item                                                                                                                ^
+'C:\Users\%UserName%\AppData\LocalLow\Adobe\Common\Media Cache\*'                                                         , ^
+'C:\Users\%UserName%\AppData\LocalLow\Adobe\Common\Media Cache Files\*'                                                   , ^
+'C:\Users\%UserName%\AppData\LocalLow\Adobe\Common\Peak Files\*'                                                          , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\Common\Media Cache\*'                                                          , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\Common\Media Cache Files\*'                                                    , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\Common\Peak Files\*'                                                           , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\Cache\*'                                                    , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\Code Cache\*'                                               , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\Crashpad\*'                                                 , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\GPUCache\*'                                                 , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\Service Worker\CacheStorage\*'                              , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\*\*\web-cache-temp\Service Worker\ScriptCache\*'                               , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Crashpad\*'                            , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\GrShaderCache\*'                       , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\ShaderCache\*'                         , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Crashpad\*'                            , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\Cache\*'                       , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\Code Cache\*'                  , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\Crashpad\*'                    , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\File System\*'                 , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\GPUCache\*'                    , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\Service Worker\CacheStorage\*' , ^
+'C:\Users\%UserName%\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\Service Worker\ScriptCache\*'    ^
 -Recurse -Force}                                                                      2>nul >nul
 
 cls
