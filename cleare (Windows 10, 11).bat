@@ -7,6 +7,33 @@ CHCP 65001>NUL
 COLOR F9
 TITLE cleare (Windows 10, 11) by MilesthoN
 
+COLOR F9
+ECHO.&ECHO.
+ECHO        Check update..
+ECHO        Проверка обновлений..
+curl -# --ssl-no-revoke --insecure -L https://github.com/milesthon/cleare/raw/main/cleare%%20Admin%%20(Windows%%2010%%2C%%2011).bat -o "%temp%\CheckcleareVersion.txt"
+if %errorlevel% neq 0 goto noupdate
+ECHO.&ECHO.
+findstr /c:"CheckcleareVersion 26012024" "%temp%\CheckcleareVersion.txt" > nul
+if %errorlevel%==0 (
+goto noupdate
+) else (
+cls
+COLOR F9
+ECHO.&ECHO.
+ECHO        Update..
+curl -# --ssl-no-revoke --insecure -L https://codeload.github.com/milesthon/cleare/zip/refs/heads/main  -o "%temp%\cleare-main.zip"
+ECHO        [32m[5m░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+powershell -command "Expand-Archive -Path "%temp%\cleare-main.zip" -DestinationPath "%temp%\cleare-main" -Force"         2>nul >nul
+copy "%temp%\cleare-main\cleare-main\*" "%~dp0"                                                                          2>nul >nul
+start "" "%~f0"&exit
+)
+
+:noupdate
+
+cls
+
 MODE 62,26
 COLOR F9
 ECHO.&ECHO.&ECHO.&ECHO.
@@ -731,6 +758,16 @@ PowerShell -Command if (Test-Path 'C:\Users\%UserName%\AppData\Local\Packages\Cl
 'C:\Users\%UserName%\AppData\Local\Packages\Clipchamp*\LocalState\EBWebView\GrShaderCache\*'                       , ^
 'C:\Users\%UserName%\AppData\Local\Packages\Clipchamp*\LocalState\EBWebView\ShaderCache\*'                           ^
 -Recurse -Force}                                                                                            2>nul >nul
+
+cls
+
+COLOR F9
+ECHO.&ECHO.
+ECHO        Deleting PowerToys cache..
+ECHO        Удаление кэша PowerToys..
+ECHO        [32m[5m█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+PowerShell -Command "if (Test-Path 'C:\Users\%UserName%\AppData\Local\Microsoft\PowerToys') {Remove-Item 'C:\Users\%UserName%\AppData\Local\Microsoft\PowerToys\Updates\*' -Recurse -Force}" 2>nul >nul
 
 cls
 

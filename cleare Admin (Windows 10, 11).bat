@@ -12,8 +12,9 @@ ECHO.&ECHO.
 ECHO        Check update..
 ECHO        Проверка обновлений..
 curl -# --ssl-no-revoke --insecure -L https://github.com/milesthon/cleare/raw/main/cleare%%20Admin%%20(Windows%%2010%%2C%%2011).bat -o "%temp%\CheckcleareVersion.txt"
+if %errorlevel% neq 0 goto noupdate
 ECHO.&ECHO.
-findstr /c:"CheckcleareVersion 16012024" "%temp%\CheckcleareVersion.txt" > nul
+findstr /c:"CheckcleareVersion 26012024" "%temp%\CheckcleareVersion.txt" > nul
 if %errorlevel%==0 (
 goto noupdate
 ) else (
@@ -527,21 +528,32 @@ ECHO        Deleting Adobe cache..
 ECHO        Удаление кэша Adobe..
 ECHO        [32m[5m████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Roaming\Adobe')                 ^
-{Remove-Item                                                                          ^
-'C:\Users\*\AppData\LocalLow\Adobe\Common\Media Cache\*'                            , ^
-'C:\Users\*\AppData\LocalLow\Adobe\Common\Media Cache Files\*'                      , ^
-'C:\Users\*\AppData\LocalLow\Adobe\Common\Peak Files\*'                             , ^
-'C:\Users\*\AppData\Roaming\Adobe\Common\Media Cache\*'                             , ^
-'C:\Users\*\AppData\Roaming\Adobe\Common\Media Cache Files\*'                       , ^
-'C:\Users\*\AppData\Roaming\Adobe\Common\Peak Files\*'                              , ^
-'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\Cache\*'                       , ^
-'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\Code Cache\*'                  , ^
-'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\Crashpad\*'                    , ^
-'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\GPUCache\*'                    , ^
-'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\Service Worker\CacheStorage\*' , ^
-'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\Service Worker\ScriptCache\*'    ^
--Recurse -Force}                                                             2>nul >nul
+PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Roaming\Adobe')                                              ^
+{Remove-Item                                                                                                       ^
+'C:\Users\*\AppData\LocalLow\Adobe\Common\Media Cache\*'                                                         , ^
+'C:\Users\*\AppData\LocalLow\Adobe\Common\Media Cache Files\*'                                                   , ^
+'C:\Users\*\AppData\LocalLow\Adobe\Common\Peak Files\*'                                                          , ^
+'C:\Users\*\AppData\Roaming\Adobe\Common\Media Cache\*'                                                          , ^
+'C:\Users\*\AppData\Roaming\Adobe\Common\Media Cache Files\*'                                                    , ^
+'C:\Users\*\AppData\Roaming\Adobe\Common\Peak Files\*'                                                           , ^
+'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\Cache\*'                                                    , ^
+'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\Code Cache\*'                                               , ^
+'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\Crashpad\*'                                                 , ^
+'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\GPUCache\*'                                                 , ^
+'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\Service Worker\CacheStorage\*'                              , ^
+'C:\Users\*\AppData\Roaming\Adobe\*\*\web-cache-temp\Service Worker\ScriptCache\*'                               , ^
+'C:\Users\*\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Crashpad\*'                            , ^
+'C:\Users\*\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\GrShaderCache\*'                       , ^
+'C:\Users\*\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\ShaderCache\*'                         , ^
+'C:\Users\*\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Crashpad\*'                            , ^
+'C:\Users\*\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\Cache\*'                       , ^
+'C:\Users\*\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\Code Cache\*'                  , ^
+'C:\Users\*\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\Crashpad\*'                    , ^
+'C:\Users\*\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\File System\*'                 , ^
+'C:\Users\*\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\GPUCache\*'                    , ^
+'C:\Users\*\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\Service Worker\CacheStorage\*' , ^
+'C:\Users\*\AppData\Roaming\Adobe\UXP\PluginsStorage\*\*\Shared\EBWebView\Default\Service Worker\ScriptCache\*'    ^
+-Recurse -Force}                                                                                          2>nul >nul
 
 cls
 
@@ -968,6 +980,16 @@ PowerShell -Command if (Test-Path 'C:\Users\*\AppData\Local\Packages\Clipchamp*'
 'C:\Users\*\AppData\Local\Packages\Clipchamp*\LocalState\EBWebView\GrShaderCache\*'                       , ^
 'C:\Users\*\AppData\Local\Packages\Clipchamp*\LocalState\EBWebView\ShaderCache\*'                           ^
 -Recurse -Force}                                                                                   2>nul >nul
+
+cls
+
+COLOR F9
+ECHO.&ECHO.
+ECHO        Deleting PowerToys cache..
+ECHO        Удаление кэша PowerToys..
+ECHO        [32m[5m█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ECHO.&ECHO.
+PowerShell -Command "if (Test-Path 'C:\Users\*\AppData\Local\Microsoft\PowerToys') {Remove-Item 'C:\Users\*\AppData\Local\Microsoft\PowerToys\Updates\*' -Recurse -Force}" 2>nul >nul
 
 cls
 
