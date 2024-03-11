@@ -16,6 +16,7 @@ This batch script will remove the system cache and unnecessary files (Does not a
   Дампы памяти
 - SRUDB.dat
 - C:\Windows\WinSxS
+- Windows Search (Windows.edb)
 - Unnecessary folders in system32 (fix)  
   Ненужные папки в system32 (фикс)
 - Disable program cache  
