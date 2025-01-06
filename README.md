@@ -1,6 +1,6 @@
 # cleare
 ***
-<p align="center">Download | Скачать</p>
+# <p align="center">Download | Скачать</p>
 <p align="center">
   <a href="https://github.com/milesthon/cleare/archive/refs/heads/main.zip">
     <img src="https://img.shields.io/badge/Download-green?style=for-the-badge" alt="Download">
