@@ -50,7 +50,8 @@ It will also clear the cache of programs such as:
 - Google Drive
 - Dropbox
 - Microsoft Office
-- Nvidia 
+- Nvidia
+- - Nvidia App
 - - GeForce Experience
 - Adobe
 - MaxonApp
