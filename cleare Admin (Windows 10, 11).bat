@@ -16,7 +16,7 @@ ECHO        Проверка обновлений..
 curl -# --ssl-no-revoke --insecure -L https://github.com/milesthon/cleare/raw/main/cleare%%20Admin%%20(Windows%%2010%%2C%%2011).bat -o "%temp%\CheckcleareVersion.txt"
 if %errorlevel% neq 0 goto noupdate
 ECHO.&ECHO.
-findstr /c:"CheckcleareVersion 04052025" "%temp%\CheckcleareVersion.txt" > nul
+findstr /c:"CheckcleareVersion 05052025" "%temp%\CheckcleareVersion.txt" > nul
 if %errorlevel%==0 (
 goto noupdate
 ) else (
@@ -811,14 +811,14 @@ ECHO        Deleting 1C cache..
 ECHO        Удаление кэша 1C..
 ECHO        [32m[5m█████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ECHO.&ECHO.
-PowerShell -Command if (Test-Path '%SystemDrive%\Users\*\AppData\Local\1C\')                      ^
-{Get-ChildItem -Path                                                                              ^
-'%SystemDrive%\Users\*\AppData\Local\1C\*' -Recurse ^| Where {$_.Name -as [guid]} ^| Remove-Item  ^
--Recurse -Force}                                                                         2>nul >nul
-PowerShell -Command if (Test-Path '%SystemDrive%\Users\*\AppData\Roaming\1C\')                    ^
-{Get-ChildItem -Path                                                                              ^
-'%SystemDrive%\Users\*\AppData\Local\1C\*' -Recurse ^| Where {$_.Name -as [guid]} ^| Remove-Item  ^
--Recurse -Force}                                                                         2>nul >nul
+PowerShell -Command if (Test-Path '%SystemDrive%\Users\*\AppData\Local\1C\')    ^
+{Get-ChildItem -Path                                                            ^
+'%SystemDrive%\Users\*\AppData\Local\1C\*'                                      ^
+-Recurse ^| Where {$_.Name -as [guid]} ^| Remove-Item -Recurse -Force} 2>nul >nul
+PowerShell -Command if (Test-Path '%SystemDrive%\Users\*\AppData\Roaming\1C\')  ^
+{Get-ChildItem -Path                                                            ^
+'%SystemDrive%\Users\*\AppData\Local\1C\*'                                      ^
+-Recurse ^| Where {$_.Name -as [guid]} ^| Remove-Item -Recurse -Force} 2>nul >nul
 
 cls
 
@@ -1145,8 +1145,7 @@ ECHO.&ECHO.
 PowerShell -Command if (Test-Path '%SystemDrive%\Users\*\AppData\Local\Steam')            ^
 {Remove-Item                                                                              ^
 '%SystemDrive%\Program Files*\Steam\appcache\httpcache\*'                               , ^
-'%SystemDrive%\Program Files*\Steam\appcache\librarycache\*.jpg'                        , ^
-'%SystemDrive%\Program Files*\Steam\appcache\librarycache\*.png'                        , ^
+'%SystemDrive%\Program Files*\Steam\appcache\librarycache\*'                            , ^
 '%SystemDrive%\Program Files*\Steam\depotcache\*'                                       , ^
 '%SystemDrive%\Program Files*\Steam\steam\cached\*'                                     , ^
 ::'%SystemDrive%\Program Files*\Steam\steamapps\common\Steamworks Shared\_CommonRedist\*' , ^
