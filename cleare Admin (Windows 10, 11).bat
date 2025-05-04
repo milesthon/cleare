@@ -16,7 +16,7 @@ ECHO        Проверка обновлений..
 curl -# --ssl-no-revoke --insecure -L https://github.com/milesthon/cleare/raw/main/cleare%%20Admin%%20(Windows%%2010%%2C%%2011).bat -o "%temp%\CheckcleareVersion.txt"
 if %errorlevel% neq 0 goto noupdate
 ECHO.&ECHO.
-findstr /c:"CheckcleareVersion 11032024" "%temp%\CheckcleareVersion.txt" > nul
+findstr /c:"CheckcleareVersion 04052025" "%temp%\CheckcleareVersion.txt" > nul
 if %errorlevel%==0 (
 goto noupdate
 ) else (
@@ -532,8 +532,18 @@ PowerShell -Command if (Test-Path '%SystemDrive%\ProgramData\NVIDIA')           
 -Recurse -Force}                                                                                                   2>nul >nul
 PowerShell -Command if (Test-Path '%SystemDrive%\ProgramData\NVIDIA')                                                       ^
 {Get-ChildItem -Path                                                                                                        ^
-'%SystemDrive%\ProgramData\NVIDIA Corporation\Downloader' -Recurse ^| Where {$_.Name -as [guid]} ^| Remove-Item             ^
--Recurse -Force}                                                                                                   2>nul >nul
+'%SystemDrive%\ProgramData\NVIDIA Corporation\Downloader'                                                                 , ^
+'%SystemDrive%\ProgramData\NVIDIA Corporation\NVIDIA app\UpdateFramework\ota-artifacts'                                   , ^
+'%SystemDrive%\ProgramData\NVIDIA Corporation\NVIDIA app\UpdateFramework\ota-artifacts\grd'                               , ^
+'%SystemDrive%\ProgramData\NVIDIA Corporation\NVIDIA app\UpdateFramework\ota-artifacts\grd\post-processing'               , ^
+'%SystemDrive%\ProgramData\NVIDIA Corporation\NVIDIA app\UpdateFramework\ota-artifacts\nvapp'                             , ^
+'%SystemDrive%\ProgramData\NVIDIA Corporation\NVIDIA app\UpdateFramework\ota-artifacts\nvapp\post-processing'             , ^
+'%SystemDrive%\ProgramData\NVIDIA Corporation\NvApp-UpdateFramework\ota-artifacts'                                        , ^
+'%SystemDrive%\ProgramData\NVIDIA Corporation\NvApp-UpdateFramework\ota-artifacts\grd'                                    , ^
+'%SystemDrive%\ProgramData\NVIDIA Corporation\NvApp-UpdateFramework\ota-artifacts\grd\post-processing'                    , ^
+'%SystemDrive%\ProgramData\NVIDIA Corporation\NvApp-UpdateFramework\ota-artifacts\nvapp'                                  , ^
+'%SystemDrive%\ProgramData\NVIDIA Corporation\NvApp-UpdateFramework\ota-artifacts\nvapp\post-processing'                    ^
+-Recurse ^| Where {$_.Name -as [guid]} ^| Remove-Item -Recurse -Force}                                             2>nul >nul
 
 cls
 
