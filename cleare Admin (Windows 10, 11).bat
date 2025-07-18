@@ -16,7 +16,7 @@ ECHO        Проверка обновлений..
 curl -# --ssl-no-revoke --insecure -L https://github.com/milesthon/cleare/raw/main/cleare%%20Admin%%20(Windows%%2010%%2C%%2011).bat -o "%temp%\CheckcleareVersion.txt"
 if %errorlevel% neq 0 goto noupdate
 ECHO.&ECHO.
-findstr /c:"CheckcleareVersion 05052025" "%temp%\CheckcleareVersion.txt" > nul
+findstr /c:"CheckcleareVersion 18072025" "%temp%\CheckcleareVersion.txt" > nul
 if %errorlevel%==0 (
 goto noupdate
 ) else (
@@ -761,6 +761,7 @@ PowerShell -Command if (Test-Path '%SystemDrive%\Users\*\AppData\Roaming\WhatsAp
 -Recurse -Force}                                                                                                    2>nul >nul
 PowerShell -Command if (Test-Path '%SystemDrive%\Users\*\AppData\Local\Packages\*WhatsAppDesktop*')                          ^
 {Remove-Item                                                                                                                 ^
+'%SystemDrive%\Users\*\AppData\Local\Packages\*WhatsAppDesktop*\LocalState\shared\transfers\*'                             , ^
 '%SystemDrive%\Users\*\AppData\Local\Packages\*WhatsAppDesktop*\LocalCache\Roaming\WhatsApp\Cache\*'                       , ^
 '%SystemDrive%\Users\*\AppData\Local\Packages\*WhatsAppDesktop*\LocalCache\Roaming\WhatsApp\Code Cache\*'                  , ^
 '%SystemDrive%\Users\*\AppData\Local\Packages\*WhatsAppDesktop*\LocalCache\Roaming\WhatsApp\Crashpad\*'                    , ^
